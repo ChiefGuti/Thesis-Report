@@ -1,0 +1,12 @@
+
+*.aux
+Chapter2.tex.bak
+Chapter1.tex.bak
+*.log
+*.bbl
+*.lof
+*.blg
+*.lol
+*.gz
+*.bak
+*.toc
