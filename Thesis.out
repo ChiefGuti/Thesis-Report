@@ -32,3 +32,9 @@
 \BOOKMARK [2][-]{subsection.3.2.3}{Random Forest}{section.3.2}% 32
 \BOOKMARK [2][-]{subsection.3.2.4}{Analytically Description}{section.3.2}% 33
 \BOOKMARK [2][-]{subsection.3.2.5}{Signal Processing Scheme }{section.3.2}% 34
+\BOOKMARK [0][-]{chapter.4}{Communication System Simulation }{}% 35
+\BOOKMARK [1][-]{section.4.1}{VPI Detection scheme }{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.2}{Coherent Communication System Implementation}{chapter.4}% 37
+\BOOKMARK [2][-]{subsection.4.2.1}{Gordon-Mollenauer effect \046 SPM in a Long-Haul Fiber Link }{section.4.2}% 38
+\BOOKMARK [2][-]{subsection.4.2.2}{SPM \046 XPM in a WDM system}{section.4.2}% 39
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 40
