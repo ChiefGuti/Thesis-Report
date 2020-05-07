@@ -121,11 +121,11 @@ In the simplest case of a \emph{linear}, \emph{nondispersive}, \emph{homogeneous
 \end{equation}
 This electric field propagates through a medium as dictated by Maxwell's equations, thus the polarization density describes the mediums response. 
 
-Inter atomic or crystalline field forces are much grater than the externally applied optical field, such that nonlinearity is usually weak. Thus, the relation between $\textbf{E}$ and $\textbf{P}$ is  approximately linear for small $\textbf{E}$, shifting slightly from linearity as $\textbf{E}$ increases. For a homogeneous isotropic dielectric media the polarization density can be expanded as a Taylor series around $\textbf{E}(t)=0$,  as done in Equation~\ref{eq:TayPden}~\cite{FundPhoto}.
+Inter atomic or crystalline field forces are much greater than the externally applied optical field, such that nonlinearity is usually weak. Thus, the relation between $\textbf{E}$ and $\textbf{P}$ is  approximately linear for small $\textbf{E}$, shifting slightly from linearity as $\textbf{E}$ increases. For a homogeneous isotropic dielectric medium the polarization density can be expanded as a power series around $\textbf{E}(t)=0$,  as done in Equation~\ref{eq:TayPden}~\cite{FundPhoto}.
 
 
-\begin{tcolorbox}[title=Nonlinear Polarization Density frequency response]
-\emph{The polarization density for a nonlinear dielectric medium is expressed as the sum of the linear component $(\epsilon_0\chi\textbf{E})$ and the nonlinear component $(\textbf{P}_{NL})$, which characteristics the mediums response to an incident electric field. }
+\begin{tcolorbox}[title=Nonlinear Polarization Density Frequency Response]
+\emph{The polarization density for a nonlinear dielectric medium is expressed as the sum of the linear component $(\epsilon_0\chi\textbf{E})$ and the nonlinear component $(\textbf{P}_{NL})$, which describes the medium's response to an incident electric field. }
 \begin{subequations}
 \begin{gather}
 \textbf{P}(t)=\epsilon_0\left(\chi\textbf{E}(t)+2\chi^{(2)}\textbf{E}^2(t)+4\chi^{(3)}\textbf{E}^3(t)+\dotsm\right)\label{eq:TayPden}\\
@@ -133,13 +133,12 @@ Inter atomic or crystalline field forces are much grater than the externally app
 \end{gather}
 \end{subequations}
 \end{tcolorbox}
+It is enough to take into account the first three terms  of the series, linear relation, second order and third order effects to describe the mediums response. The rest of the higher order effects have a very small contribution and can usually be ignored. 
 
-It is enough to take into account the first three terms  of the series, linear relation, second order and third order effects to describe the mediums response. The rest of the higher order effects have a very small contribution and can be ignored. 
-
-It becomes necessary to distinguish between media that have second order or third order effects. A centrosymmetric media presents a dominant nonlinear optical processes described by the terms in the polarization density that are a cubic function of the electric field ~\cite{levenson1974dispersion}. Noncentrosymetric media polarization density exhibits dependencies on both the  squared and cube of the electric field. Throughout this project our main concern is studying fiber optics made out of centrosymmetric media like fused silica SiO$_2$, such that nonlinear effects arise from third order nonlinear dependencies of the polarization density.
+It becomes necessary to distinguish between media that have second order or third order effects. A centrosymmetric medium presents dominant nonlinear optical processes described by the terms in the polarization density that are a cubic function of the electric field ~\cite{levenson1974dispersion}. In noncentrosymetric media, the polarization density exhibits dependencies on both the  squared and cube of the electric field. Throughout this project, our main concern is studying fiber optics made out of centrosymmetric media like fused silica SiO$_2$, such that nonlinear effects arise from third order nonlinear dependencies of the polarization density.
 
 \subsection{Third Order nonlinear Kerr effect}
-Given this projects interest in centrosymmetric media it is necessary to describe the nonlinear response of the polarization density to a ideal monochromatic electric field like the one given in Equation~\ref{eq:elfield}.  Lets consider only the effects of the third order response of the dielectric media $\textbf{P}_{NL}(t)=4\chi^{(3)}\textbf{E}^3(t)$. Substituting Equation~\ref{eq:elfield}  into the nonlinear polarization density  gives Equation~\ref{eq:PNL}, which describes the frequency response that arises.
+Given this projects interest in centrosymmetric media it is necessary to describe the nonlinear response of the polarization density to an ideal monochromatic electric field like the one given in Equation~\ref{eq:elfield}.  Lets consider only the effects of the third order response of the dielectric medium $\textbf{P}_{NL}(t)=4\chi^{(3)}\textbf{E}^3(t)$. Substituting Equation~\ref{eq:elfield}  into the nonlinear polarization density  gives Equation~\ref{eq:PNL}, which describes the frequency response that arises.
 
 \begin{tcolorbox}[title=Nonlinear Polarization Density]
 \emph{The nonlinear polarization density $\textbf{P}_{NL}$ response to a monochromatic field can be decomposed into the individual frequency effects $\mathcal{P}_{NL}(\omega_i)$ that emerge from a third-order nonlinear medium~\cite{FundPhoto}.}
@@ -153,9 +152,9 @@ Given this projects interest in centrosymmetric media it is necessary to describ
 \end{subequations}
 \end{tcolorbox}
 
-Two different frequencies components $\omega$ and $3\omega$ emerge from the nonlinear response of the polarization density. The presences of a $3\omega$ response indicates that \emph{third-harmonic generated} (THG) light can be produced in the nonlinear interaction. However, in most cases the energy conversion efficiency is low for THG, which makes it hard to extract a strong $3\omega$ signal from the third order polarization density~\cite{FundPhoto}. 
-Optical communications are interested in self induced sources of noise like the frequency response $\mathcal{P}_{NL}(\omega)$. Single frequency channel in a fiber link interacts with the fiber and self induced a distortion to the overall signal. 
-
+Two different frequency components $\omega$ and $3\omega$ emerge from the nonlinear response of the polarization density. The presences of a $3\omega$ response indicates that \emph{third-harmonic generated} (THG) light can be produced in the nonlinear interaction. However, in this cases the energy conversion efficiency is low for THG, 
+producing a relatively weak $3\omega$ signal from the third order polarization density~\cite{FundPhoto}.
+ 
 As has been mentioned before it is assumed that the polarization density response varies only slightly from the linear response $\epsilon_0\chi\textbf{E}$ with increasing \textbf{E}. It can be assumed that for a centrosymmetric material  an incremental change $\Delta\chi$ would be connected to the nonlinear polarization density \cite{FundPhoto,FiberAgrawal}. With this insight a similar assumption to the linear case can be made for $\mathcal{P}_{NL}$, relating it to the change in the susceptibility $\Delta\chi$ at a frequency $\omega$ by 
 \begin{equation}
 \mathcal{P}_{NL}(\omega)=\epsilon_0\Delta\chi\mathcal{E}(\omega).\label{eq:incPE}
@@ -173,8 +172,8 @@ Expressing the incremental susceptibility as a change in the refractive index wo
 
 
 
-\begin{tcolorbox}[title=Optical Kerr effect]
-\emph{ All material have a linear dependency on with the optical intensity for high enough power, this is known as the Optical Kerr Effect. The effect arises from the anharmonic response of electrons to optical fields, resulting in a nonlinear susceptibility. The nonlinear coefficient $\bar{n}_2$ is also defined as the optical Kerr coefficient, but is also commonly known as the nonlinear-index coefficient.~\cite{FiberAgrawal,boyd2003nonlinear}  }
+\begin{tcolorbox}[title=Optical Kerr Effect]
+\emph{ All material have a linear dependency on the optical intensity for high enough power, known as the Optical Kerr Effect. The effect arises from the anharmonic response of bound electrons to optical fields, resulting in a nonlinear susceptibility. The nonlinear coefficient $\bar{n}_2$ is also defined as the optical Kerr coefficient, but is also commonly known as the nonlinear-index coefficient.~\cite{FiberAgrawal,boyd2003nonlinear}  }
 \begin{subequations}
 \begin{align}
 \bar{n}_2&=\frac{3\eta_0}{n^2\epsilon_0}\chi^{(3)} &  &\text{Optical Kerr Coefficient}\\
@@ -183,24 +182,23 @@ n(I)&=n+\bar{	n}_2I  &  &\text{Optical Kerr Effect}
 \end{subequations}
 \end{tcolorbox}
 
-The optical Kerr effect makes a medium sensitive to power fluctuations, it is expected that some sort of distortion will be manifested in the signal due to its effect. In optical communication the Kerr effect induces nonlinear sources of noise that limit the system. To get a better understanding on the nonlinear effects it is necessary to study the properties of a optical fiber.
+The optical Kerr effect makes a medium sensitive to power fluctuations. It is expected that some sort of distortion will be manifested in the signal due to its effect. In optical communication the Kerr effect induces nonlinear sources of noise that limit the system. To get a better understanding on the nonlinear effects it is necessary to study the properties of an optical fiber.
 
 
 
 
 \section{Fiber}
-In this section the phenomenological description for the optical fiber used to construct the communication links are discussed. To investigate nonlinear noise it is necessary to have a physical description of the interaction between the optical signal and the transporting fiber. First a few comments are done on the usual fiber refractive index profile and the definition of some fundamental properties, like the propagation constant of the medium. To describe the nonlinear interaction an extension will be to the linear polarization density to include higher order terms. A general overview of the physics will be done, since a more detailed presentation is out of the interest of this thesis. 
+In this section the phenomenological description for the optical fiber used to construct the communication links are discussed. To investigate nonlinear noise it is necessary to have a physical description of the interaction between the optical signal and the transporting fiber. First a few comments are made on the usual fiber refractive index profile and the definition of some fundamental properties, like the propagation constant of the medium. To describe the nonlinear interaction an extension will be made to the linear polarization density to include higher order terms. A general overview of the physics will be done, since a more detailed presentation is out of the interest of this thesis. 
 
 
 \subsection{Fiber Properties}\label{sec:Fiber} 
 \subsubsection{Refractive index fiber profile}
-%In Section~\ref{sec:rayoptics} a basic description of optics was presented that allowed us to describe basic predictions on how rays propagate. 
 
 An optical fiber in a ray optics frame work is just a clever exploitation of the law of refraction and the critical angle.  In Figure~\ref{fig:FiberProf} a step index fiber profile is visualized, that has a refractive index $n_1$ in the core and $n_2$ in the cladding. The light gathering capacity of an optical fiber is known as the \emph{numerical aperture} (NA) that can be approximated for a step index fiber by 
 \begin{equation}
 \text{NA}=n_1(2\Delta)^\frac{1}{2}, \ \ \Delta=\frac{n_1-n_2}{n_1}
 \end{equation}
-where $\Delta$ is the \emph{fractional index}. Increasing the fractional index would improve the amount of light gather by the fiber, but it would also induce a large multipath or \emph{modal dispersion}. Figure~\ref{fig:FiberProf}shows a set of propagating rays, each traveling a path of different length, as a result this rays disperse in time broadening the pulse. Current optical communication fibers are design to have a $\Delta < 0.01$  allowing for better modal dispersion performance~\cite{FiberAgrawal}.  
+where $\Delta$ is the \emph{fractional index}. Increasing the fractional index would improve the amount of light gather by the fiber, but it would also induce a large multipath or \emph{modal dispersion}. Figure~\ref{fig:FiberProf} shows a set of propagating rays, each traveling a path of different length. As a result, these rays disperse in time, broadening the pulse. Current optical communication fibers are design to have a $\Delta < 0.01$  allowing for better modal dispersion performance~\cite{FiberAgrawal}.  
 \begin{figure}[H]
 \center
 \includegraphics[width=\linewidth]{stepindexfibertotal}
@@ -208,7 +206,7 @@ where $\Delta$ is the \emph{fractional index}. Increasing the fractional index w
 \label{fig:FiberProf}
 \end{figure}
 ~
-In Figure~\ref{fig:FiberProf} the \textit{refractive index profile} of the step index fiber is also shown. The cores design plays an important role defining the fibers response to an optical signal. In Section~\ref{sec:ManOpF} the refractive index profiles of more interesting fibers will be discussed. 
+In Figure~\ref{fig:FiberProf} the \textit{refractive index profile} of the step index fiber is also shown. The core design plays an important role defining the fibers response to an optical signal. In Section~\ref{sec:ManOpF} the refractive index profiles of more interesting fibers will be discussed. 
 
 
 
