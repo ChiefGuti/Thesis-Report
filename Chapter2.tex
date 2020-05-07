@@ -211,32 +211,32 @@ In Figure~\ref{fig:FiberProf} the \textit{refractive index profile} of the step 
 
 
 \subsubsection{Power loss \& Amplification}
-A critical parameter for an optical system is the attenuation of the fiber, it provides a measurement of the power loss during transmission. For communication system having a strong output signal is important to reliably detect the transmitted signal. An optical fiber of length $L$ with an input launch power $P_0$ produce a transmitted power $P_T$ written as 
+A critical parameter for an optical system is the attenuation of the fiber. It provides a measurement of the power loss during transmission. For a communication system, having a strong output signal is important to reliably detect the transmitted signal. An optical fiber of length $L$ with an input launch power $P_0$ has a transmitted power $P_T$ written as 
 \begin{equation}
 P_T=P_0e^{-\alpha L},
 \end{equation}
 where $\alpha$ the \emph{attenuation constant} is a measure of all the losses in the fiber~\cite{agrawal2000nonlinear}. The attenuation constant has units of dB/km and is wavelength dependent, as reported in Reference~\cite{miya1979ultimate} a fiber with $\Delta=1.9\cdot10^{-3}$ exhibits a fiber-loss of 0.2~dB/km in the wavelength region near 1550~nm. In today's optical communication system the usual operating frequency $\omega$ is 193.1~THz because of its low fiber-loss and ease of amplification using \textit{erbium doped fibers}.
 
-Amplification is crucial to counteract the losses in the fiber, extending the reach of the communication system. An ideal amplifier would produce a output power $P_{out} = G P_{in}$ without distortion given a input power $P_{in}$. In general a amplifier can be described by the  \textit{amplification factor} $G(\omega)$ and the \textit{amplification profile} $g(\omega)$ given by $G=e^{gL}$. However, real amplifiers produce noise in the signal, quantified by the \textit{noise figure} that will be described in Chapter??.   
+Amplification is crucial to counteract the losses in the fiber, extending the reach of the communication system. An ideal amplifier would produce an output power $P_{out} = G P_{in}$ without distortion given an input power $P_{in}$. In general an amplifier can be described by the  \textit{amplification factor} $G(\omega)$ and the \textit{amplification profile} $g(\omega)$ given by $G=e^{gL}$. The amplifiers simulated imparted a minimum amount of noise, having a low \textit{noise figure} of 3~dB. Thus, the dominant sources of noise will arise from the light-matter interaction.
 
 
 
 \subsubsection{Chromatic dispersion}\label{sec:CD}
 
-When electromagnetic waves interacts with a mediums bound electrons different effects arise through the polarization density, some of which have been covered is Section~ \ref{sec:NLDM}. The interaction between the atomic structure and the electromagnetic field is also dependent on the fields frequency $\omega$, this property is known as \textit{chromatic dispersion}. The frequency dependence is manifested through the refractive index $n(\omega)$. Far from the material resonance the refractive index can be approximated by the \emph{Sellmeier equation}~\cite{agrawal2000nonlinear,FiberAgrawal}
+When electromagnetic waves interacts with a medium's bound electrons, different effects arise through the polarization density, some of which have been covered is Section~ \ref{sec:NLDM}. The interaction between the atomic structure and the electromagnetic field is also dependent on the fields frequency $\omega$. This property is known as \textit{chromatic dispersion}. The frequency dependence is manifested through the refractive index $n(\omega)$. Far from the material resonance the refractive index can be approximated by the \emph{Sellmeier equation}~\cite{agrawal2000nonlinear,FiberAgrawal}
 
 \begin{equation}
 n^2(\omega)=1+\sum^m_{j=1}\frac{B_j\omega^2_j}{\omega^2_j-\omega^2}
 \end{equation}
- where $\omega_j$ is the resonance frequency and $B_j$ is the strength of the jth resonance. In a optical fiber these parameters are found experimentally by fitting the material dispersion curve. Fiber dispersion plays a critical role when building a optical communication system. Transmitted light pulses are composed frequencies, in a dispersive medium each frequency would travel at its unique speed $c/n(\omega)$ making the pulse spread in time.
+ where $\omega_j$ is the resonance frequency and $B_j$ is the strength of the jth resonance. In a optical fiber these parameters are found experimentally by fitting the material dispersion curve. Fiber dispersion plays a critical role when building an optical communication system. A pulsed signal frequency components can be found through the Fourier transformation of the signal in the time domain, as is known form signaling theory a pulsed signal contains a range of frequencies. In the same manner, transmitted light pulses are composed of frequencies, in a dispersive medium each frequency would travel at its unique speed $c/n(\omega)$ making the pulse spread in time.
  
- When nonlinear effects are present in the fiber as well, the combination of dispersion and nonlinearity can result in a more complex behavior, this will be discussed in Section~\ref{sec:NLPN}. The fiber dispersive effects are dependent on the mediums \textit{propagation constant} $\beta$ defined as 
+ When nonlinear effects are present in the fiber as well, the combination of dispersion and nonlinearity can result in a more complex behavior. This will be discussed in Section~\ref{sec:NLPN}. The fiber dispersive effects are dependent on the mediums \textit{propagation constant} $\beta$ defined as 
  
 
 \begin{equation}
 \beta(\omega)=n(\omega)\frac{\omega}{c}.
 \end{equation}
-A approximate response for the complete spectral range can be obtained by doing a Taylor expansion around the pulse center frequency $\omega_0$
+An approximate response for the complete spectral range can be obtained by doing a Taylor expansion around the pulse center frequency $\omega_0$
 \begin{equation}
 \beta(\omega)=\beta_0+\beta_1(\omega-\omega_0)+\frac{1}{2}\beta_2(\omega-\omega_0)^2+\dotsm
 \end{equation}
@@ -254,37 +254,34 @@ where the \emph{group refractive index} is $n_g=\left(n+\omega\frac{dn}{d\omega}
 D_\lambda=\frac{d\beta_1}{d\lambda}=-\frac{2\pi c}{\lambda^2}\beta_2
 \end{equation}
 
-The units for $D_\lambda$ are [s/m-Hz] and for $D_\omega$ has [ps/nm-km] presenting variation en value given a wavelength. Thus, a pulse spectrum would under go slightly different values of $D$ which would broaden the pulse. This broadening is a higher-order dispersive effects governed by the \emph{dispersion slope}   $S=dD/d\lambda$ that can be written in terms of propagation constant $\beta_2$ and $\beta_3$ as
+The units for $D_\lambda$ are [s/m-Hz] and for $D_\omega$ has [ps/nm-km] presenting variation in value given a wavelength. Thus, a pulse spectrum would under go slightly different values of $D$ which would broaden the pulse. This broadening is a higher-order dispersive effects governed by the \emph{dispersion slope}   $S=dD/d\lambda$ that can be written in terms of propagation constant $\beta_2$ and $\beta_3$ as
 \begin{equation}
 S=\frac{2\pi c}{\lambda^2}\beta_3+\frac{4\pi c}{\lambda^3}\beta_2.
 \end{equation}
 
-A optical fiber can be design in such a way the the total dispersion of the fiber can present desirable properties for an communication system. with a clever design the fibers dispersive response can be flattened to a have a constant value for a spectral range. An other fiber can also be designed to have shifted dispersion minimum present at frequency with lowest attenuation. 
+An optical fibers cladding/core can be designed in such a way that the total dispersion of the fiber can present desirable properties for an communication system. With a clever design, the fibers dispersive response can be flattened to a have a constant value for a spectral range. Another fiber can also be designed to have shifted a dispersion minimum present at frequency with lowest attenuation. 
 
 Dispersion in an optical communication link can alter the signals timing, due to the pulse broadening in time different pulses would start to overlap, distorting the signal. Optical compensation can be done using fibers with opposite dispersion parameters  to cancel each others effect out. It is more useful to use a highly dispersive fiber to compensate in a short length a large amount of accumulated dispersion. A more detailed description of dispersion compensation is done in Section~\ref{sec:DisCom}.  
 
 \subsection{Higher Order Optical Noise}\label{sec:NLPN}
-A silica fiber presents a linearly dependent refractive index due to the optical Kerr effect. As is discussed by S. Dris et al. in Reference~\cite{dris2017analysis} ''\textit{Nonlinear interference noise} (NLIN) due to the Kerr effect presents the most significant bottleneck towards increasing throughput in a flexible WDM optical networks''. The objective of this project is to suggest a detection scheme that mitigates NLIN.  Through this section a description of the different noise sources of inters will be presented. 
+A silica fiber presents a linearly dependent refractive index due to the optical Kerr effect. As is discussed by S. Dris et al. in Reference~\cite{dris2017analysis} ''\textit{Nonlinear interference noise} (NLIN) due to the Kerr effect presents the most significant bottleneck towards increasing throughput in a flexible WDM optical networks''. The objective of this project is to suggest a detection scheme that mitigates NLIN.  Through this section a description of the different noise sources of interest will be presented. 
 
-First it is necessary to define quantities that represent the signals resilience.  The signals quality is quantified by  \textit{optical signal to noise} Ratio (OSNR) that is dependent on the signals power $P$ and noises average power $N$ given by
+First, it is necessary to define quantities that represent the signals resilience.  The signals quality is quantified by  \textit{optical signal to noise ratio} (OSNR) that is dependent on the signal power $P$ and noise average power $N$ given by
 \begin{equation}
 \text{OSNR}=10\log_{10}\left(\frac{P}{N}\right)
 \end{equation}
- in dB units~\cite{FiberAgrawal}. In a coherent system it is necessary to have a high OSNR in the receive, usually above 20~dB, for a accurate detection. When noise is present, either linear or nonlinear, the OSNR drops distorting the signal. As discussed in the introduction the NLIN distortion is present as a phase noise rotation preserving some information. 
+ in dB units~\cite{FiberAgrawal}. In a coherent system it is necessary to have a high OSNR at the receiver, usually above 20~dB, for an accurate detection. When noise is present, either linear or nonlinear, the OSNR drops, distorting the signal. As discussed in the introduction, the NLIN distortion is present as a phase noise rotation preserving some information. 
  
- In a communication system the quality of the transmission relies on the amount of correctly classified symbols. With a low number of misclassified symbols correction can be implemented in a higher layer of the communication system to recover or correct bit stream transmitted with FEC~\cite{NLPNinCFO}. The SER describes the amount of mistakes made in the total transmitted signal as
+ In a communication system the quality of the transmission relies on the amount of correctly classified symbols. With a low number of misclassified symbols, correction can be implemented in a higher layer of the communication system to recover or correct bit stream transmitted with FEC~\cite{NLPNinCFO}. The SER describes the amount of mistakes made in the total transmitted signal as
  \begin{equation}
 \text{SER} = \frac{\text{no. of incorrect received symbols}}{\text{no. of transmitted symbols}}.
 \end{equation}
 
+Nonlinear noise in an optical communication system induces a phase shift to the detected signal. If not taken into account, it becomes a fundamental limiting factor to the transmission distance~\cite{NLPNDSP}. Having a physical description of the different nonlinear effects, is then useful to alter the expected detection regions to improve the SER.
 
 
 
-Nonlinear noise in a optical communication system induces a phase shift to the detected signal. If not taken into account, it becomes a fundamental limiting factor to the transmission distance~\cite{NLPNDSP}. Having a physical description of the different nonlinear effects is then useful to alter the expected detection regions to improve the SER.
-
-
-
- Three different nonlinear effects will be discussed that fall into  two categories, \emph{intra-channel NLIN} or \emph{self-channel interference} and \emph{inter-channel NLIN} or \emph{cross/multi-channel interference}. The intra-channel effects in interest are \emph{self phase modulation } and the \emph{Gordon-Mullenauere effect}. For inter-channel effects the \emph{cross phase modulation} will be considered in a WDM system.
+ Three different nonlinear effects will be discussed that fall into  two categories, \emph{intra-channel NLIN} or \emph{self-channel interference} and \emph{inter-channel NLIN} or \emph{cross/multi-channel interference}. The intra-channel effects in interest are \emph{self phase modulation } and the \emph{Gordon-Mullenauere effect}. For inter-channel effects \emph{cross phase modulation} will be considered in a WDM system.
   
 \subsubsection{Self Phase Modulation}
 In a fiber absent of dispersion $\beta_2=0$ the transmitted pulse undergoes a phase shift due to the intensity dependent refractive index, this modulation is known as \textit{self phase modulation }(SPM). The refractive index intensity dependence induces a power dependence on the propagation constant~\cite{FiberAgrawal}, that can be written as~\cite{le2015advanced}  
@@ -296,54 +293,54 @@ In a fiber absent of dispersion $\beta_2=0$ the transmitted pulse undergoes a ph
 
 
 
-where $A_{eff}$ is the effective area of the guided mode and $k=2\pi/\lambda$ is the electric fields wavenumber. In it self the change to the propagation constant suggest an effect analogues to GVD , where the pulse is chirped and broaden~\cite{agrawal2000nonlinear}. As is deduced in Reference~\cite{le2015advanced} the total nonlinear phase shift can be computed as the difference between $\beta^\prime$ and $\beta$ over the interaction length as  
+where $A_{eff}$ is the effective area of the guided mode and $k=2\pi/\lambda$ is the wavenumber. In it self the change to the propagation constant suggest an effect analogues to GVD, where the pulse is chirped and spectral broadening~\cite{agrawal2000nonlinear}. As is deduced in Reference~\cite{le2015advanced} the total nonlinear phase shift can be computed as the difference between $\beta^\prime$ and $\beta$ over the interaction length as  
 \begin{subequations}
 \begin{gather}
-\phi_{\text{SPM}}=\int_0^L\gamma(\beta^\prime-\beta)dz=\int_0^L\gamma P(z)dz\\
+\phi_{\text{SPM}}=\int_0^L(\beta^\prime-\beta)dz=\int_0^L\gamma P(z)dz\\
 \phi_{\text{SPM}}<\gamma L_{eff}P_{in}.
 \end{gather}
 \label{eq:phinl}
 \end{subequations}
 The effective interaction length is defined as $L_{eff}=(1-e^{-\alpha L})/\alpha$ and the power in the fiber $P(z)=P_{in}e^{\alpha L}$~\cite{le2015advanced}. Equation~\ref{eq:phinl} gives us the amount of phase change over the fiber length L along the propagation axis $z$. The assumptions made to compute the nonlinear phase shift describes the maximum phase shift possible in a system where a CW driving laser is used with a IM/DD format non-return to zero (NRZ) ~\cite{agrawal2001applications,FiberAgrawal,le2015advanced}. 
 
-It is an important to note that when dispersion effects are present the dependencies become more complex and require more sophisticated numerical solutions, making it cumbersome to have a complete model of the system~\cite{agrawal2001applications,gordon1990phase}.  In multiple references ~\cite{le2015advanced,FiberAgrawal,agrawal2000nonlinear} the limit for $P_{in}$ is introduced as a general rule to follow before SPM starts to corrupt the signal.  The upper bound  is given as $P_{in}<0.1\alpha/\gamma N_{A}$, where $N_{A}$ is the number of amplifiers~\cite{le2015advanced}. For  a average fiber system with 10 amplifiers the upper limit is 1.5-3~mW. Making it a critical impermanent for optical system. SPM is a NLIN and as concluded in Refrence~\cite{dris2017analysis} the effect are modulation format independent.
+It is important to note that when dispersion effects are present the dependencies become more complex and require more sophisticated numerical solutions, making it cumbersome to have a complete model of the system~\cite{agrawal2001applications,gordon1990phase}.  In multiple references ~\cite{le2015advanced,FiberAgrawal,agrawal2000nonlinear} the limit for $P_{in}$ is introduced as a general rule to follow before SPM starts to corrupt the signal.  The upper bound  is given as $P_{in}<0.1\alpha/\gamma N_{A}$, where $N_{A}$ is the number of amplifiers~\cite{le2015advanced}. For  an average fiber system with 10 amplifiers the upper limit is 1.2-3~mW. Making it a critical impermanent for optical system with a high average power. SPM is a NLIN and as concluded in Reference~\cite{dris2017analysis} the effects are modulation format independent.
 
 
 
 \subsubsection{Cross Phase Modulation}
-In a WDM system the presence of multiple channels in a single fiber span would alter the interaction of the fiber with the transmitted optical signal.  If we have a  $M$-channel WDM system with a fixed channel spacing the cross-phase modulation for channel $i$ can be described as
+In a WDM system the presence of multiple channels in a single fiber span would alter the interaction of the fiber with the transmitted optical signal.  If we have an $M$-channel WDM system with a fixed channel spacing the cross-phase modulation for channel $i$ can be described as
  
 \begin{equation}
 \phi^i_{\text{XPM}}=\gamma L_{eff}\left(P^i_{in}+2\sum^M_{j\ne i}P_j\right)
 \end{equation}
-where we can see that SPM effects are also taken into account for each channel. The XPM  effects are important due to the dependence of the channels phase with the bit patterns of all the others~\cite{agrawal2001applications}. As in the case of SPM a phase shift can be compute to represents the maximum  shift acquired in a system 
+where we can see that SPM effects are also taken into account for each channel. The XPM  effects are important due to the dependence of the channels phase with the bit patterns of all the others~\cite{agrawal2001applications}. As in the case of SPM a phase shift can be computed to represents the maximum  shift acquired in a system 
 \begin{equation}
 \phi^i_{\text{XPM}}<\frac{\gamma}{\alpha}(2M-1)P_{ch}
 \end{equation}
 where $P_{ch}$ is the power per channel. Given the linear relation between the phase shift and the number of channels, there is a limitation to the number of channels or power per channel that can be transmitted.
 
- In a system where GVD effects are present pattern-dependent phase shifts are converted to power fluctuations, reducing OSNR at the receiver~\cite{agrawal2001applications}.  A rough estimate for the power restriction is computed in Referene ~\cite{le2015advanced} for maximum phase shift $\phi_{XPM}<1$ the upper bound is  $P_{ch}~<~\alpha/\gamma N_{A}(2M~-~1)$ before XPM effects arise. In general the power restriction per channel is limited to bellow 1~mW depending on the system, increasing the amount of constraints in the system. Through this section no mention of the effect of amplification has been mentioned, the interaction between the spontaneous noise produced by amplification and the Kerr effect plays an important role in long-haul transmission links. 
+ In a system where GVD effects are present, pattern-dependent phase shifts are converted to power fluctuations, reducing the OSNR at the receiver~\cite{agrawal2001applications}.  A rough estimate for the power restriction is computed in Referene ~\cite{le2015advanced} for maximum phase shift $\phi_{XPM}<1$~rad the upper bound is  $P_{ch}~<~\alpha/\gamma N_{A}(2M~-~1)$ before XPM effects arise. In general the power restriction per channel is limited to bellow 1~mW depending on the system, increasing the amount of constraints for the system design. Through this section no mention of the effect of amplification has been mentioned, the interaction between the spontaneous noise produced by amplification and the Kerr effect plays an important role in long-haul transmission links. 
 
 
-\subsubsection{Gordon-Mollenauer effect}
+\subsubsection{Gordon-Mollenauer Effect}
 
-In a fiber communication link it is usual to use multiple segments of fiber with optical amplifiers (OA) to extend the systems reach. This type of architecture is known as lump amplification, commonly used in long-haul optical systems with over 10 amplifiers. Noise produced by OA interacts with the fiber through the Kerr effect  producing phase fluctuations at the receiver and limiting the transmission distance~\cite{agrawal2001applications}. This nonlinear source of noise is known as the \textit{Gordon-Mollenauer effect}~\cite{gordon1990phase} or simply \textit{Nonlinear Phase noise} (NLPN). 
+In a fiber communication link it is usual to use multiple segments of fiber with optical amplifiers (OA) to extend the systems reach. This type of architecture is known as lump amplification, commonly used in long-haul optical systems with over 10 amplifiers. Noise produced by OA interacts with the fiber through the Kerr effect  producing phase fluctuations at the receiver and limiting the transmission distance~\cite{agrawal2001applications}. This nonlinear source of noise is known as the \textit{Gordon-Mollenauer effect}~\cite{gordon1990phase} or simply \textit{nonlinear phase noise} (NLPN). 
 
 A transmission line that has $N$ spans of optical fiber followed by its corresponding  linear loss amplification is ultimately limited by the presence of \textit{amplified spontaneous emission} (ASE) noise. Due to the refractive index dependence on optical power, fluctuation produced by ASE noise induces a phase shift in the received signal~\cite{gordon1990phase}. The nonlinear  fluctuation  can be approximated as ~\cite{le2015advanced}    
 
 \begin{equation}
-\phi_{\text{GM}}\approx N\gamma L_{eff}P_{in}.
+\phi_{\text{NLPN}}\approx N\gamma L_{eff}P_{in}.
 \end{equation}
 
-Notice that the ASE noise is still a linear source of noise add to the signal as AWGN. However, it also has a second effect by introducing small fluctuations in the optical power, inducing a phase shift in the transmitted signal due to the Kerr effect. As is explained by P. Gordon and L. Mollenauer in Reference~\cite{gordon1990phase} noise produced by the amplifier can be decomposed into a noise field with two degrees of freedom that have the same shape as the pulse. ''One in-phase with it , and the other in quadrature. The quadrature component produces a immediate phase shift, and the in-phase one alters the energy of the pulse. The energy change results in an additional nonlinear phase shift by the time the pulse reaches the receiver''.
-\subsubsection{Overall NLIN}
+Notice that the ASE noise is still a linear source of noise added to the signal as AWGN. However, it also has a second effect by introducing small fluctuations in the optical power, inducing a phase shift in the transmitted signal due to the Kerr effect. As is explained by P. Gordon and L. Mollenauer in Reference~\cite{gordon1990phase} noise produced by the amplifier can be decomposed into a noise field with two degrees of freedom that have the same shape as the pulse. ''One in-phase with it, and the other in quadrature. The quadrature component produces an immediate phase shift, and the in-phase one alters the energy of the pulse. The energy change results in an additional nonlinear phase shift by the time the pulse reaches the receiver''.
+\subsubsection{Compound Nonlinear Phase Shift}
 
-Three sources of nonlinear interference noise have  been presented; self phase modulation, cross phase modulation and nonlinear phase noise. Each of this effects induces a phase rotation to the transmitted signal, corrupting the phase detected phase. Each of the NLIN sources has a complex interaction with the dispersive effect, making it necessary to carry out a numerical simulation for a precise model. However, it is not always possible to know the systems parameters before hand, given that in a real system deploying a fiber link requires tolerances.
+Three sources of nonlinear interference noise have  been presented; self phase modulation, cross phase modulation and nonlinear phase noise. Each of this effects induces a phase shift to the transmitted signal. Represented in a phase diagram as a rotation of the transmitted constellation. Corrupting the detected phase. Each of the NLIN sources has a complex interaction with the dispersive effect, making it necessary to carry out a numerical simulation for a precise model. However, it is not always possible to know the systems parameters before hand, given that in a real system deploying a fiber link requires tolerances.
 
 A maximum phase shift can be expressed for each of the noise source, adding  up to a total maximum nonlinear phase shift $\phi_{\text{nl}}$. A general approximation to quantify the expected phase shift for a signal can be computed as
 
 \begin{equation}
-\phi_{\text{nl}}=\phi_{\text{SPM}}+\phi_{\text{XPM}}+\phi_{\text{GM}}.
+\phi_{\text{nl}}=\phi_{\text{SPM}}+\phi_{\text{XPM}}+\phi_{\text{NLPN}}.
 \end{equation} 
 Each effect contributes to the total phase shift induced on the signal. Even though they all arise from the Kerr effect, some can be compensated more efficiently than others. Compensation in the end is what interest us, extracting as much transmission distance or capacity from the system before nonlinear noise corrupts the signal.  
 
@@ -351,67 +348,56 @@ Each effect contributes to the total phase shift induced on the signal. Even tho
 
         
 \begin{tcolorbox}[title= Bound Nonlinear Phase Shift ]
-\emph{All sources of nonlinear noise; XPM, SPM and NLPN are found to have an upper bound for a fixed system configuration. Thus, a upper bound can be set on the total nonlinear phase noise that is detected at the receiver side.  }
+\emph{All sources of nonlinear noise; XPM, SPM and NLPN are found to have an upper bound for a fixed system configuration. Thus, an upper bound can be set on the total nonlinear phase noise that is detected at the receiver side.  }
 \begin{equation}
-\phi_{nl}<\frac{\gamma}{\alpha}\left (2M+N\right )
+\phi_{nl}<\frac{\gamma}{\alpha}\left (2M+N\right )P_{ch}
 \end{equation}
-Where $\gamma$ is the nonlinear parameter definde in Equation~\ref{eq:gammadef} and $\alpha$ is the absorption coefficient of fiber. A reference value can be drawn for a M-channel and N-span link, quantifying the nonlinear rotation undergone by the signal.  
+Where $\gamma$ is the nonlinear parameter defined in Equation~\ref{eq:gammadef} and $\alpha$ is the absorption coefficient of the fiber. A reference value can be drawn for a M-channel and N-span link, quantifying the nonlinear phase shift undergone by the signal.  
 \end{tcolorbox}
 
 \subsection{Optical Fiber \& Compensation }
-As presented in the previous section, nonlinear effects are quantified by some fundamental parameters; the  nonlinear refractive index, dispersion parameter and the dispersion slope. In Section~\ref{sec:Fiber} this properties were presented, discussing fundamentally where they come from. However, it is also necessary to discuses the different types of fiber that can be manufactured and how they can be used to compensate for fiber dispersion.  In this section the physical description for  dispersion compensation is introduced. We conclude by discussing the different fiber used for the simulation and how they where implemented.    
+As presented in the previous section, nonlinear effects are quantified by some fundamental parameters; the  nonlinear refractive index, dispersion parameter and the dispersion slope. In Section~\ref{sec:Fiber} there properties were presented. However, it is also necessary to discuss the different types of fiber that can be manufactured and how they can be used to compensate for fiber dispersion.  In this section, the physical description for  dispersion compensation is introduced. We conclude by discussing the different fibers used for the simulation and how they where implemented.    
 \subsubsection{Dispersion Compensation in Fibers}\label{sec:DisCom}
- All optical fibers manifest dispersive effects given the  refractive index dependence on frequency. In Section~\ref{sec:CD} the dispersion coefficient was introduced, concluding that given the different frequency components of a optical pulse GVD would spread the pulse altering the systems timing~\cite{goldfarb2007chromatic}. Compensation becomes then necessary to retrieve the original signal. Fortunately, a clever design of the optical core can alter the dispersion parameter $D_\omega$ and the dispersion slope $S$ such that a zero dispersion system can be constructed. Consider a link composed of two fibers, a \textit{single mode fiber }(SMF) with a $D_{1}$ and a \textit{dispersion compensating fiber} (DCF) with a $D_{2}$. The condition for perfect dispersion compensation is 
+ All optical fibers manifest dispersive effects, given the  refractive index dependence on frequency. In Section~\ref{sec:CD} the dispersion coefficient was introduced, concluding that given the different frequency components of a optical pulse, would spread in time due to GVD altering the system's timing~\cite{goldfarb2007chromatic}. Compensation becomes then necessary to retrieve the original signal. Fortunately, a clever design of the optical core can alter the dispersion parameter $D_\omega$ and the dispersion slope $S$ such that a zero dispersion system can be constructed. Consider a link composed of two fibers, a \textit{single mode fiber }(SMF) with a $D_{1}$ and a \textit{dispersion compensating fiber} (DCF) with a $D_{2}$. The condition for perfect dispersion compensation is 
 \begin{equation}
 D_{1}(\lambda_{n})L_{1}+D_{2}(\lambda_{n})L_{2}=0\label{eq:DC}
 \end{equation}
-where $\lambda_{n}$ is the operating wavelength of the nth channel and $L_{i}$ is the corresponding length of each fiber. Its clear then that the dispersion compensation varies slightly for each channel. Thus, to have  perfect compensation it is necessary to also consider the slope of the dispersion coefficient. It would be ideal if the dispersion slope for the DCF could be design to have a value of
+where $\lambda_{n}$ is the operating wavelength of the nth channel and $L_{i}$ is the corresponding length of each fiber. It is clear then that the dispersion compensation varies slightly for each channel. Thus, to have  perfect compensation it is necessary to also consider the slope of the dispersion coefficient. It would be ideal if the dispersion slope for the DCF could be design to have a value of
 \begin{equation}
 S_{2}=S_{1}\frac{D_{2}}{D_{1}}.\label{eq:SC}
 \end{equation}
-\indent Unfortunately, manufacturing and fiber design have limits, such that it is not usual to have a perfectly compensated link. When designing a communication system the dispersion scheme is built around the operating wavelength $\lambda=1550~nm$ (as has been mentioned before) this wavelength has a low absorption, present zero dispersion in some fibers and is the current standard in optical communication. Thus, to design a link the fiber is first selected depending on the system configuration. In practice it is desirable to have a DCF that has a dispersion coefficient and slope that best approximate the values given by Equations~\ref{eq:DC} and Equation~\ref{eq:SC}. 
-
-A more accurate visualization of GVD is represented in Figure~\ref{fig:GVD} where a propagating pulse is spreading in time, compensation is also shown using a short DCF that mitigates the dispersion accumulated in a long SMF. Ignoring losses between fiber splices notice that the effective core area for a DCF is smaller than SMF. Which in general makes compensating fibers have larger nonlinear refractive index $\bar{n}_{2}$, making NLIN more present in the system. 
-
-
+\indent Unfortunately, manufacturing and fiber design have limits, such that it is not usual to have a perfectly compensated link. When designing a communication system the dispersion scheme is built around the operating wavelength $\lambda=1550~nm$ (as has been mentioned before) this wavelength has a low absorption, presents zero dispersion in some fibers and is the current standard in optical communication. Thus, to design a link the fiber is first selected depending on the system's configuration. In practice it is desirable to have a DCF that has a dispersion coefficient and slope that best approximate the values given by Equations~\ref{eq:DC} and Equation~\ref{eq:SC}. 
 \begin{figure}[h]
 \center
 \includegraphics[width=\linewidth]{fiberdcf.png}
-\caption{Visualization of chromatic dispersion compensation of pulse using a DCF.  }
+\caption{Visualization of chromatic dispersion of a optical pulse propagating through a SMF. Compensation of pulse was preformed using a highly dispersive DCF.  }
 \label{fig:GVD}
 \end{figure} 
-%here
+A more accurate visualization of GVD is represented in Figure~\ref{fig:GVD} where a propagating pulse is spreading in time, compensation is also shown using a short DCF that mitigates the dispersion accumulated in a long SMF. Ignoring losses between fiber splices notice that the effective core area for a DCF is smaller than SMF. Making compensating fibers have a larger nonlinear refractive index $\bar{n}_{2}$, thus making NLIN more present in the system. 
+
+
+
+
 \subsubsection{Manufactured Optical Fibers}\label{sec:ManOpF}
 
-The refractive index profile can be design to alter the optical properties of the fiber. In previous sections the connection between the refractive index and the dispersion coefficient, nonlinear coefficient and other parameters has been discussed. Now we are interested in making a few remarks about the optical fibers that were implemented during the simulation. Each fiber was used in the simulation but the specifications are taken from real fibers that exist on the market.
-
-First, lets consider a single channel system with a operating wavelength of $1550~nm$. If only one channel is present then it would be useful that the fiber would have zero dispersion for this wavelength. Multiple fibers exist in the market that present zero dispersion for this wavelength, they are known as  \textit{dispersion shifted fiber} (DCF)~\cite{kato2000dispersion,kim1994measurement}. To design a optical fiber with a shifted dispersion the refractive index profile has to made in such away that the fibers modal dispersion and the waveguide dispersion balance each other out. The general refractive index profile is shown in Figure~\ref{fig:DSF}, compared to a step index fiber (Figure~\ref{fig:FiberProf}) we can see four different refractive index must be used and a intricate  design to achieve zero dispersion. However, not all system architectures can use DSF given that when multiple channels are present in the same fiber it is necessary to compensate the dispersion acquired by all channels.
-
-
-\begin{figure}[H]
+The refractive index profile can be designed to alter the optical properties of the fiber. In previous sections the connection between the refractive index and the dispersion coefficient, nonlinear coefficient and other parameters has been discussed. Now we are interested in making a few remarks about the optical fibers that were implemented during the simulation. Each fiber that was used in the simulation followed specifications from a real fibers that have been studied in peer-reviewed articles.
+\begin{figure}[h]
   \centering
   \subfloat[DSF]{\label{fig:DSF}\includegraphics[width=0.45\textwidth,height=15em]{DSFprofile.png}}
   \qquad
   \subfloat[DCF]{\label{fig:DCF}\includegraphics[width=.45\textwidth,height=15em]{DCFprofile.png}}     
-  \caption{Refractive index for dispersion shifte or dispersion compensating fibers.}
+  \caption{Refractive index profile for dispersion shifted or dispersion compensating fibers. }
   \label{fig:FiberIndex}
 \end{figure}
 
+First, let us consider a single channel system with a operating wavelength of $1550~nm$. If only one channel is present then it would be useful that the fiber would have zero dispersion for this wavelength. Multiple fibers exist in the market that present zero dispersion for this wavelength, they are known as  \textit{dispersion shifted fiber} (DCF)~\cite{kato2000dispersion,kim1994measurement}. To design a optical fiber with a shifted dispersion the refractive index profile has to made in such away that the fibers chromatic dispersion and the waveguide dispersion balance each other out. The general refractive index profile is shown in Figure~\ref{fig:DSF}, compared to a step index fiber (Figure~\ref{fig:FiberProf}) four different cladding sections with different refractive index are used, this intricate design achieves modified dispersion effects. However, not all system architectures can use DSF given that when multiple channels are present in the same fiber it is necessary to compensate the dispersion acquired by all channels.
 
 
-For WDM systems it is usual that all channels present dispersion in the transmission fiber. Instead of implementing a DSF a \textit{nonzero-dispersion shifted fiber} (NZ-DSF) is deployed that presents a small dispersion value for the center wavelength $1550~nm$. As was mention in Section~\ref{sec:DisCom} it is not enough to just consider the dispersion parameter, it is necessary to take into account the dispersion slope as well to compensate a multichannel system. To compensate a separate \textit{slope compensating-dispersion compensation fiber} (SC-DCF) or SC-DCF module~\cite{aikawa2005dispersion} is used to compensate the acquired dispersion for all channels in a short span of fiber. Figure~\ref{fig:DCF} shows the refractive index profile for a general DCF, the fiber design is not trivial, but thanks to this clever design dispersion is not a limiting factor for transmission distance as it once was.
-
-To simulate the long-haul optical system a DSF with ideal dispersion is considered. Due to our interest in measuring the NLPN after propagating in lump amplification this DSF is a good candidate for what would be deployed today. For the ten channel WDM system two fibers where implemented, a NZ-DSF for transmission and a SC-DCF to compensate for dispersion. This system present more nonlinear noise given the compensating fiber higher nonlinear coefficient, and both of them have a smaller effective area as well. In  Table~\ref{tab:FiberData} the values for all fiber used in the simulation are shown, where all values are taken from manufactured fibers that can be bought today~\cite{namihira2002comparison,onishi1997highly}.
-  
+For WDM systems it is usual that all channels present dispersion in the transmission fiber. Instead of implementing a DSF a \textit{nonzero-dispersion shifted fiber} (NZ-DSF) is deployed that presents a small dispersion value for the center wavelength $1550~nm$. As was mention in Section~\ref{sec:DisCom}, it is not enough to just consider the dispersion parameter, it is necessary to take into account the dispersion slope as well to compensate a multichannel system. To compensate a separate \textit{slope compensating-dispersion compensation fiber} (SC-DCF) or SC-DCF module~\cite{aikawa2005dispersion} is used to compensate the acquired dispersion for all channels in a short span of fiber. Figure~\ref{fig:DCF} shows the refractive index profile for a general DCF, the fiber design is not trivial, but thanks to this clever design, dispersion is not a limiting factor for transmission distance as it once was.
 
 
-
-
-
-
-\begin{mytable}[float=t, label=tab:FiberData]{  Fiber Characteristics}
+\begin{mytable}[float=t, label=tab:FiberData]{ Fiber Characteristics}
 \emph{Physical characteristics for the optical fibers used in the simulations. In the long-haul system the DSF is implemented and a combination of NZ-DSF and SC-DCF is used in the WDM system. }
-
 \begin{center}
 \begin{tabular}{c|cccccc} 
 \toprule
@@ -421,9 +407,14 @@ DSF & 2.4 & 0.21 & 70 & $<$0.13 & 0.11  \\
 \midrule
 NZ-DSF & 2.25 & 0.2 & 65 & 4.2 & 0.085  \\ 
 \midrule
-SC-DCF & 2.8 & 0.41 & 16.7 & -47 & -0.71  \\ 
+SC-DCF & 2.8 & 0.41 & 16.7 & -47 & -0.93  \\ 
 \bottomrule
 \end{tabular} 
 \end{center}
 All values used for the fiber design in the simulation where taken from References~\cite{kato2000dispersion,kim1994measurement,aikawa2005dispersion,namihira2002comparison} 
 \end{mytable}
+
+To simulate the long-haul optical system a DSF with ideal dispersion is considered. Due to our interest in measuring the NLPN after propagating in lump amplification this DSF is a good candidate for what would be deployed today. For the ten channel WDM system two fibers where implemented, a NZ-DSF for transmission and a SC-DCF to compensate for dispersion. This system presents more nonlinear noise given the compensating fibers higher nonlinear coefficient, and both of them have a smaller effective area as well. In  Table~\ref{tab:FiberData} the values for all fibers used in the simulation are shown, where all dispersive coefficient values are taken for an operating wavelength of 1550~nm.
+ 
+
+
