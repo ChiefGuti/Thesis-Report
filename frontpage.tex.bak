@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   This is frontpage.tex file needed for the dmathesis.cls file.  You   %
+%  have to  put this file in the same directory with your thesis files.  %
+ % 
+%                                                                        % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%           The title page           %%%%%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{roman}
+%\pagenumbering{arabic}
+
+\setcounter{page}{1}
+
+\newpage
+
+
+\thiswatermark{\centering \put(112,-550){\transparent{0.1}\includegraphics[scale=2]{LundUniversity_C_RGB.png}} }
+
+\thispagestyle{empty}
+\begin{center}
+   \vspace*{1cm}
+  {\large \textbf{Master thesis in  }}
+
+  \vspace*{0.5cm}
+  {\LARGE \bf\noindent \textbf{Machine Learning Enabled Nonlinear Phase Noise Mitigation for a Coherent Optical System  }}
+
+  \vspace*{1cm}
+  {\large\bf Sergio Steven Guti\'errez Pulgarin}
+  
+  \vfill
+
+  {\large A thesis submitted in partial fulfillment of the requirements\\
+  [1mm] for the degree Master in Photonics}
+  \vspace*{0.9cm}
+  
+  % Put your university logo here if you wish.
+%   \begin{center}
+   \includegraphics[width= 7cm]{LundUniversity_C_BLACK.png}
+%   \end{center}
+
+  {\large Department of Physics \\
+          [-1mm] Atomic Physics Division\\
+          [-1mm] Lund, Sweden\\
+          [1mm]  May, 2020}
+          
+  \vspace*{0.25cm}
+	{\normalsize \bf \hfill Supervisor: Cord Arnold}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% The dedication page, of you have one  %%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thiswatermark{\centering \put(112,-550){\transparent{0.1}\includegraphics[scale=2]{LundUniversity_C_RGB.png}} }
+
+\thispagestyle{empty}
+\begin{center}
+ \vspace*{2cm}
+  \textit{\LARGE {Dedicated to}}\\ 
+the endless source of knowledge that we all strive to be part of. Life has given me the chance to pursue my dreams, light has given me a way to understand my life. 
+
+
+
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%           The abstract page         %%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{\numberline{}Abstract}
+\begin{center}
+  \textbf{\large Machine Learning Enabled Nonlinear Phase Noise Mitigation for a Coherent Optical System}
+
+  \vspace*{1cm}
+  \textbf{\normalsize Sergio Steven Guti\'errez Pulgarin}
+
+  \vspace*{0.5cm}
+  {\normalsize Submitted for the degree of Maters in Photonics\\ May 2020}
+
+  \vspace*{1cm}
+  \textbf{\large Abstract}
+\end{center}
+
+In recent years, the process of absorbing two photons using a non-classical light sources has been studied thoroughly. In particular, it has been experimentally demonstrated that the absorption cross section of two entangled photons is much greater than the absorption cross section of two uncorrelated photons. In this dissertation a source of entangled photons produced through spontaneous parametric down conversion or SPDC was constructed and characterized. It was found that for a pump laser of $411.32~nm$ and a BBO crystal of $1~mm$ the produced photons followed the same optical path as the laser, it was also found that the joint spectrum is symmetric at the degenerate wavelength of $822\pm0.5~nm$. This work conclude by showing a first approximation to execute a measurement of the Hong-Ou-Mandel effect. The objective of the measurements of joint spectrum and the Hong-Ou-Mandel effect are to understand the correlation properties of the photon source, with this information a virtual state spectroscopy technique can be implemented on the experiment constructed. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%     The acknowledgements page         %%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Acknowledgements}
+\thiswatermark{\centering \put(0,-100){\includegraphics[width=3.5cm]{LundUniversity_C_RGB}} \put(260,-650){\transparent{1}\includegraphics[width=3cm]{kthlogo}\includegraphics[width=3cm]{riselogo}} }
+
+
+The success and final outcome of this project required a lot of guidance and assistance from many people and I am extremely privileged to have got this all along the completion of my project. All that I have done is only due to such supervision and assistance and I would not forget to thank them.~\\
+
+I respect and thank Prof. M. Nuñez \& Prof. A. Valencia , for providing me an opportunity to do this project work in Quantum optics and giving me all the  support and guidance, which made me complete the project duly. I am extremely thankful to her for providing such a constant support and guidance.~\\
+
+I owe my deep gratitude to Victor Buesaquillo and John Suárez, who took keen interest throughout my work and guided me along, providing all the necessary information and putting in  many hours in the laboratory.~\\
+
+ 
+I am thankful to and fortunate enough to get constant encouragement, support and guidance from all Teaching staffs of  the Department of Physics which helped me in successfully completing my undergraduate studies. Also, I would like to extend my sincere esteems to all staff in the laboratory for their timely support.~\\
+
+ 
+Sergio Gutiérrez
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%    tableofcontents, listoffigures and listoftables       %%%%%%%%%
+%%%%%%%%        Command if you do not have  them                  %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+\listoffigures
+\lstlistoflistings
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%   END OF FRONT PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
