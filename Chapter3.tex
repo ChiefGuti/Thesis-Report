@@ -62,7 +62,7 @@ return IQ_C
 \end{lstlisting}
 
 This technique  can correctly compensate NLPN present in one channel. A reference can be drawn to this compensation technique to determine the quality of the mitigation predicted by the ML schemes. The next section will cover the ML algorithms used and the implementation suggested to obtain the best decision regions for a constellation with NLIN. 
-\section{Nonparameter Phase Noise Mitigation with Machine Learning  }
+\section{Machine Learning Algorithms Implementation  }
 
 The benefit of implementing machine learning to the detection scheme of a communication link is not needing the physical state of the system~\cite{zibar2015application}. This allows the detection scheme to learn about the real impairments of the complete link, computing a accurate decision region for the received constellation. It could be said that training replaces knowledge. This quality makes it a robust system due to the applicability to different systems configurations without the need of making any previous assumptions.~\\
 
@@ -196,16 +196,16 @@ Op_param= DSP_RandForest(IQ_T,BS_T)
 
 
 
-\subsection{Machine lEARNING NONPARAMETER GI  }
-In the previous sections two different ML algorithms were presented, in this section both of this algorithms are implemented to obtain a more powerful and reliable algorithm. Random forest can be operational very fast but can present over-fitting which reduces its predictive capability. Support vector machine does not over-fit the training dataset but it requires a longer time to find the optimal parameters and train the algorithm to perform accurate predictions. Both of this Algorithms have different advantages and disadvantages, making a joint implementation an interesting idea to balance there short comings.~\\
+\section{Nonparameter Detection Scheme  }
+In the previous sections two different ML algorithms were presented. In this section, both of this algorithms are implemented to obtain a more powerful and reliable algorithm. Random forest can be operational very fast but can present over-fitting which reduces its predictive capability. Support vector machine does not over-fit the training dataset but it requires a longer time to find the optimal parameters and train the algorithm to perform accurate predictions. Both of this algorithms have different advantages and disadvantages, making a joint implementation an interesting idea to balance there short comings.~\\
 
-In this thesis a DSP scheme that computes decision regions that characterize the nonlinear noise present in a 16~QAM coherent optical link is suggested, improving the amount of correctly classified symbols extending the maximum transmission length. The algorithm implements first is random forest because of its fast execution time. If the SER of the training dataset is grater than zero then support vector machine is also executed to check if a better SER could be achieved. With both of this ML algorithms the transmission length of the system can be significantly improved for the same transmission link. The structure of the script implemented is shown in Listing~\ref{lis:MLDSP}, the execution time of the script can take between 2~s to 45~s to compute the optimal decision regions which is a relatively fast implementation time for the system.~\\								    
+In this thesis a DSP scheme that computes decision regions that characterize the nonlinear noise present in a 16~QAM coherent optical link is suggested. Our intent for this scheme is improving the amount of correctly classified symbols extending the maximum transmission length. The algorithm computes first  the random forest classifier because of its fast execution time. If the SER of the training dataset is grater than zero then support vector machine is also executed to check if a better SER could be achieved. With both of this ML algorithms the transmission length of the system can be improved for the same transmission link. The structure of the script implemented is shown in Listing~\ref{lis:MLDSP}, the execution time of the complete script can take between 2~s to 45~s to compute the optimal decision regions which is a relatively fast implementation time for the system.~\\								    
 
-\begin{lstlisting}[language=Python,caption=Machine learning enabled DSP scheme that  returns the best performing ML algorithm and the optimal parameter for the training algorithm. ,label=lis:MLDSP]
+\begin{lstlisting}[language=Python,caption=Machine learning enabled DSP scheme that  returns the best performing ML algorithm and its optimal parameter for the training dataset. ,label=lis:MLDSP]
 def DSP_ML(IQ_T, BS_T):
 # Compute optimal parameters for RF given the training set of IQ parameters
 	Op_param_RF = DSP_RandForest(IQ_T,BS_T)
-# Define the RF structure and tree construction parameters
+# Define the RF structure and optimal tree construction parameters
 	Forest = RandomForestClassifier(max_depth=Op_param['max_depth'],
 										max_features=Op_param['max_features'],
 										min_samples_leaf=Op_param['min_samples_leaf'],
@@ -239,7 +239,7 @@ def DSP_ML(IQ_T, BS_T):
 		return 'RF', Op_param_RF
 \end{lstlisting}	
 
-To get a better understanding of the difference between the decision regions determined in Figure~\ref{fig:NLPNvis} and the predicted regions computed by the ML algorithm the RF and SVM regions are shown in Figure~\ref{fig:MLcon}. Notice how RF (Figure~\ref{fig:RFcon}) tends to over-fit the training dataset increasing its SER. However, SVM for the same dataset finds optimal regions that do not over lap, predicting accurately all symbols. From Figure~\ref{fig:MLcon} one can observe the difference on how both algorithms compute the regions by looking at the smoothness of the regions. For this dataset SVM has a lower SER and would  be the optimal DSP scheme.
+To get a better understanding of the difference between the decision regions determined in Figure~\ref{fig:NLPNvis} and the predicted regions computed by the ML algorithm, the RF and SVM predicted regions are shown in Figure~\ref{fig:MLcon}. Notice how RF (Figure~\ref{fig:RFcon}) tends to over-fit the training dataset increasing its SER. However, SVM for the same dataset finds optimal regions that do not over lap, predicting accurately most symbols. From Figure~\ref{fig:MLcon} one can observe the difference on how both algorithms compute the regions by looking at the smoothness of the regions. For this dataset SVM has a lower SER and would  be the optimal DSP scheme.
 
 \begin{figure}[H]
   \centering

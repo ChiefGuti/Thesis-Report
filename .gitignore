@@ -10,3 +10,5 @@ Chapter1.tex.bak
 *.gz
 *.bak
 *.toc
+*.dvi
+*.out
