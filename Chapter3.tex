@@ -147,7 +147,7 @@ A \textit{random forest} (RF) or also known as \textit{random decision trees} is
 
 To counter the effects of over-fitting a dataset, two different techniques are implemented that improve its generalization capabilities. The first technique is \textit{ bootstraping}, which is a sub-sampling dataset technique to increase the training data~\cite{friedman2002stochastic}. Bootstraping creates datasets with the same statistical properties as the original dataset by random sampling with replacement. The second technique is known as \textit{boosting}, where you ensemble a large amount of weak learners to produce a strong learner~\cite{hancock2012bootstrapping}. This three methods compose the basis of a random forest ML algorithm, each of this techniques effect is depicted in Figure~\ref{fig:RFshow}. Implementing random forest can be easily done using multiple programming languages that offer optimized libraries like Python with Sklearn~\cite{scikit-learn}.
 
-\subsubsection{Algorithm}
+\subsubsection{Implemented Algorithm}
 Implementing a nonparameter NLIN mitigating algorithm requires training the algorithm in the first instance and then a datasets from the same system can be implemented. Tress are also restrained of growth by delimiting the number of data points (or features), depths of the tree, number of splits and other parameters as shown in Listing~\ref{lis:RF}. The function DSP\_ RandForest takes a set of IQ parameters and its corresponding bit sequence and searches for the optimal parameters to classify this dataset. With the optimal parameters, the algorithm can be trained to obtain the optimal decision boundaries to predict the bit sequence of a detected symbol.    
 
 
