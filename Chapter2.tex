@@ -3,7 +3,7 @@ In this chapter the physical description and basic concepts implemented through 
 \section{Emission, Detection \& Modulation}
 The components of a coherent optical communication system will be given a short description in this section. The basic components  for an optical communication system are the  \textit{laser}, \textit{modulator} and \textit{detector}. For a coherent system the modulation format is an important design parameter, as was mentioned in the introduction, noise effects affect in different ways a given modulation format. Each component plays a fundamental role in a optical system; the correct selection of this elements can improve the throughput and transmission distance of a link. First let us consider the emission source that enabled coherent communication due to its high phase coherence, the \textit{distributed feedback laser} (DFB) laser.  
 
-\subsection{Light emitting source }
+\subsection{Light Emitting Source }
 
 In the beginning coherent optical communications  did not get as much attention as IM/DD systems because in the 1990 all available  light sources presented large phase noise and frequency drift~\cite{kikuchi2010coherent}, which is not useful for a coherent system. With the invention of the DFB laser new interest sprung in coherent systems. The main advantage of a DFB laser is the ability to emit a single longitudinal mode, which implies high frequency and phase stability.
  
@@ -24,7 +24,7 @@ The linewidth of a DFB laser is usually bellow 10~MHz~\cite{kikuchi2010coherent}
  To determine the operating power of a fiber system two noise sources constrain the system. The first noise source arises from the optical fibers refractive index dependence on the transmitted signal power~\cite{FiberAgrawal}. With a high power signal distortions can be induced if power fluctuations interact with the electrical susceptibility of the fiber. The second noise sources is common amplification effect when a low power signal is amplified AWGN noise is added~\cite{agrawal2001applications}, decreasing the OSNR and transmission length. Optical modulators require a strong carrier signal to operate at high OSNR. This requirements limits the minimum operating power. To determine the optimal operating range a detailed analysis will be discussed throughout this thesis.   
 
 
-\subsection{Modulator \& Detector}
+\subsection{Modulator \& Detector}\label{sec:moddet}
 Some of the advantages of optical communication systems rely on the modulation of the carrier signal and on the high sensitivity detection. To transmit more information over the same bandwidth a clever representation of the signal has to be standardized, as is done by HOM. However, it is necessary to modulate the carrier signal physical properties with precision to control reliably the information transmitted. Detection in coherent optical communication requires a scheme that can extract simultaneously multiple physical measurements from a single pulse. These two requirements can be solved with clever implementation and design of well understood optical phenomena.
 
 In coherent communication the amplitude and phase of the carrier signal are modulated to transmit information. For an optical system \textit{phase modulation} (PM) can be achieved by passing through a non-centrosymmetric crystal that presents the Pockels effect~\cite{FiberAgrawal,kikuchi2015fundamentals}. This type of crystal have refractive index dependent on the applied voltage allowing PM~\cite{kikuchi2015fundamentals}. If a set of this crystals are used in a Mach-Zehnder configuration \textit{amplitude modulation} (AM) can be achieved.  This type of modulators are known as \textit{Mach-Zehnder-type push-pull modulators} or \textit{Mach-Zehnder modulator} (MZM)~\cite{kikuchi2015fundamentals}. To obtain a simultaneous amplitude and phase (In-phase and quadrature components)  modulation two MZM in parallel with a $\pi/2$ phase shift can be combined as shown in Figure~\ref{fig:DDMzm}, modulating independently the IO  components~\cite{kikuchi2015fundamentals}. Any kind of multilevel modulation format can be done with this scheme~\cite{ho2005generation},currently  integrated Dual-drive MZM LiNbO$_3$ IQ modulators are available on the market. This is the same modulator architecture that was used for the simulation.   
@@ -37,7 +37,7 @@ Modulation of the CW optical carrier not only alters the IQ components but it al
 \subfloat[Dual-drive MZM ]{\label{fig:DDMzm}\includegraphics[width=\textwidth]{Dual-DriveModulator.png}}
   \qquad
   \subfloat[Phase-diversity homodyne reciver]{\label{fig:hOMODe}\includegraphics[width=\textwidth]{Hdetector.png}} 
-  \caption{Detection and modulation scheme for a coherent optical communication system. }
+  \caption{Detection and modulation scheme for a coherent optical communication system.\\ {\scriptsize Image designed in reference to available figures in Reference~\cite{ho2005generation,kikuchi2015fundamentals}} }
   \label{fig:DetMod}
 \end{figure}
 
@@ -58,23 +58,14 @@ where k represents the symbols interval with length $T_{S}=mT_{B}$ and $1/T_{B}$
  
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{QAMconsView}
+\includegraphics[width=0.6\linewidth]{QAMconsView}
 \caption{Four bit per symbol signal represented in a phase diagram of a square 16QAM constellation. }
 \label{fig:16QAMcons}
 \end{figure}
 
-
-
-
- 
-
-
-
-
 \section{Electromagnetic Theory of Light}
 
 The current theory of light comes from the idea of photons as the smallest unit of radiation composed of electromagnetic energy. As described by quantum mechanics a photon can be represented either by a wave or a particle. For the propagation and nonlinear interaction it is convenient to work in the wave picture, while at the detector you detect individual particles. A photon can be represented by  an electromagnetic field that arises from a set of coupled vector fields that are functions of time and position: the \emph{electric field} $\textbf{E}(\textbf{r},t)$  and the  \emph{Magnetic field} $\textbf{H}(\textbf{r},t)$. The phenomenological description of the interaction between this fields  are known as the \emph{Maxwell's equations} which describe all electromagnetic phenomena~\cite{FiberAgrawal}. 
-
 \subsection{Maxwell Equations in a Medium}
 
 In this thesis, the interaction between a modulated optical signal and silica glass fiber is studied to get a better understanding of nonlinear noise that corrupts an optical communication system. For a fundamental understanding, it is necessary to take into account the physical interaction of the medium with the electromagnetic field. A mediums response in the presence of a electromagnetic field is described by two vector fields: the \emph{electric flux density} $\textbf{D}(\textbf{r},t)$ and the \emph{magnetic flux density} $\textbf{B}(\textbf{r},t)$. For an optical communication system we can assume an optical fiber that is a nonconducting medium and has no free charges or currents, simplifying the interaction. These four fields are related by the  Maxwell's equations in a source-free medium~\cite{FundPhoto,FiberAgrawal}:
@@ -137,7 +128,7 @@ It is enough to take into account the first three terms  of the series, linear r
 
 It becomes necessary to distinguish between media that have second order or third order effects. A centrosymmetric medium presents dominant nonlinear optical processes described by the terms in the polarization density that are a cubic function of the electric field ~\cite{levenson1974dispersion}. In noncentrosymetric media, the polarization density exhibits dependencies on both the  squared and cube of the electric field. Throughout this project, our main concern is studying fiber optics made out of centrosymmetric media like fused silica SiO$_2$, such that nonlinear effects arise from third order nonlinear dependencies of the polarization density.
 
-\subsection{Third Order nonlinear Kerr effect}
+\subsection{Third Order Nonlinear Kerr effect}
 Given this projects interest in centrosymmetric media it is necessary to describe the nonlinear response of the polarization density to an ideal monochromatic electric field like the one given in Equation~\ref{eq:elfield}.  Lets consider only the effects of the third order response of the dielectric medium $\textbf{P}_{NL}(t)=4\chi^{(3)}\textbf{E}^3(t)$. Substituting Equation~\ref{eq:elfield}  into the nonlinear polarization density  gives Equation~\ref{eq:PNL}, which describes the frequency response that arises.
 
 \begin{tcolorbox}[title=Nonlinear Polarization Density]
@@ -187,7 +178,7 @@ The optical Kerr effect makes a medium sensitive to power fluctuations. It is ex
 
 
 
-\section{Fiber}
+\section{Optical Fiber Overview}
 In this section the phenomenological description for the optical fiber used to construct the communication links are discussed. To investigate nonlinear noise it is necessary to have a physical description of the interaction between the optical signal and the transporting fiber. First a few comments are made on the usual fiber refractive index profile and the definition of some fundamental properties, like the propagation constant of the medium. To describe the nonlinear interaction an extension will be made to the linear polarization density to include higher order terms. A general overview of the physics will be done, since a more detailed presentation is out of the interest of this thesis. 
 
 
@@ -386,7 +377,7 @@ The refractive index profile can be designed to alter the optical properties of 
   \subfloat[DSF]{\label{fig:DSF}\includegraphics[width=0.45\textwidth,height=15em]{DSFprofile.png}}
   \qquad
   \subfloat[DCF]{\label{fig:DCF}\includegraphics[width=.45\textwidth,height=15em]{DCFprofile.png}}     
-  \caption{Refractive index profile for dispersion shifted or dispersion compensating fibers. }
+  \caption{Refractive index profile for dispersion shifted or dispersion compensating fibers. \\ {\scriptsize Image designed in reference to available figures in Reference~\cite{kato2000dispersion,aikawa2005dispersion}}}
   \label{fig:FiberIndex}
 \end{figure}
 
@@ -396,7 +387,7 @@ First, let us consider a single channel system with a operating wavelength of $1
 For WDM systems it is usual that all channels present dispersion in the transmission fiber. Instead of implementing a DSF a \textit{nonzero-dispersion shifted fiber} (NZ-DSF) is deployed that presents a small dispersion value for the center wavelength $1550~nm$. As was mention in Section~\ref{sec:DisCom}, it is not enough to just consider the dispersion parameter, it is necessary to take into account the dispersion slope as well to compensate a multichannel system. To compensate a separate \textit{slope compensating-dispersion compensation fiber} (SC-DCF) or SC-DCF module~\cite{aikawa2005dispersion} is used to compensate the acquired dispersion for all channels in a short span of fiber. Figure~\ref{fig:DCF} shows the refractive index profile for a general DCF, the fiber design is not trivial, but thanks to this clever design, dispersion is not a limiting factor for transmission distance as it once was.
 
 
-\begin{mytable}[float=t, label=tab:FiberData]{ Fiber Characteristics}
+\begin{mytable}[float=h, label=tab:FiberData]{ Fiber Characteristics}
 \emph{Physical characteristics for the optical fibers used in the simulations. In the long-haul system the DSF is implemented and a combination of NZ-DSF and SC-DCF is used in the WDM system. }
 \begin{center}
 \begin{tabular}{c|cccccc} 

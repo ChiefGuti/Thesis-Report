@@ -31,7 +31,7 @@ To Compensate for the acquired nonlinear phase shift, it is natural to suggest a
 
 As is reported by K. Ho~\cite{NLPNDSP} this compensation scheme can double the transmission distance of a communication system that has as a dominant noise source NLPN. However, it is also acknowledged that other types of nonlinear noise can limit the transmission distance given that only ASE power fluctuations are taken into account. A simple python code can be implemented with this procedure for each detected IQ parameters.
 
-\subsection{Algorithm}
+\subsubsection{Implemented Algorithm}
 
 In this section, a short description is given of the compensation scheme implemented in the simulation to compensate NLPN is discussed. This script is executed by a DSP processing module in the simulation software VPI. The function DSP\_ NLPN takes as arguments the IQ parameters detected and request information from the design system through SystemDesign and SystemDesignVolatile. All parameters can be given to the scheme since it has been predefined for the simulation. Each step of the computation is shown in Listing~\ref{lis:NLPN} where the total output of the function gives the compensated IQ components. ~\\
  
@@ -81,13 +81,13 @@ For both of the ML algorithms implemented a simple representation of what traini
 
 In 1992 V. Vapnik et al. proposed a training algorithm that automatically tunes the capacity of the classification function by maximizing the margin between training examples and class boundary~\cite{boser1992training}. A critical improvement was done to this algorithm when kernels were implemented to solve the nonlinear separable situation~\cite{smola1998learning}. These two techniques are known now as \textit{support vector machine} (SVM), a ML algorithm that transforms a dataset to a higher space and computes a hyper plain that has the maximum margins separating the plane and the data classes~\cite{marsland2014machine}.~\\
 
-\subsection{Analytical Description}
+\subsubsection{Analytical Description}
 
  Consider an \textit{input space} of $x(i)$ data points containing two different classes that can not be divided by a linear boundary. Applying a transformation like a projection to higher-dimensional space $v(i)=\varphi(x(i))$ projects the data points into to a space known as a \textit{feature space}, where they could be separated. In this feature space, we can define \textit{hyperplain} as all data points $v(i)$ in $\textbf{v}$ that fulfill $\textbf{w}^{T}\textbf{v}+b=0$, where $\textbf{w}$ is a vector perpendicular to the hyper plane. By defining the support vectors  as all data point $\textbf{v}(i)$ that lay on the hypreplane  $\textbf{w}^{T}\textbf{v}+b=\pm 1$ the maximum margin $b$ can be computed by maximizing $1/||\textbf{w}||$ ~\cite{marsland2014machine,Nonparameter,khan2019optical}. The kernels implemented where a Gaussian radial base function, polynomial combination or a hyperbolic tangent mapping, this transformation are a one to one mapping of the given dataset. A visual description of the algorithm is shown in Figure~\ref{fig:SVMshow} as a general picture we can keep in mind.~\\  
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{SVM.png}
-\caption{Visualization of the different steps in SVM to find the optimal nonlinear boundary between a dataset with two classes.}
+\caption{Visualization of the different steps in SVM to find the optimal nonlinear boundary between a dataset with two classes.\\ {\scriptsize Image designed in reference to available figures in Reference~\cite{khan2019optical}}}
 \label{fig:SVMshow}
 \end{figure}
 
@@ -96,7 +96,7 @@ As a big picture answer the algorithm knows it is getting better if it can decre
 \arg\min_{\textbf{w},b}\frac{1}{||\textbf{w}||} \ \ \  \text{   subjec to } y(l)(\textbf{w}^{T}\textbf{v}(l)+b)\geq1 
 \end{equation}
 where $y(l)$ is a class label given by $\pm 1$ and $\textbf{v}(l)$ is the vector of all data points $v(i)$ with label $y(l)$  ~\cite{boser1992training}. This ML algorithm can be trained to compute nonlinear boundaries dividing data classes in a higher-dimensional space. However, to find the optimal solution one must select the correct transformation (or kernel), the weight of each class and the scaling factor $b$. In the example given a dataset with two classes was described, this was a limitation of SVM in the early 2010. This algorithm  was implemented as NLPN compensation scheme in Reference~\cite{Nonparameter} where a 16QAM constellation is processed by four SVM schemes that detect two classes each, the total response of the classifiers would classify all the sixteen constellation points. These algorithms have been now been optimized and improved such that it is capable of determining multiple classes by an extension of the class label $y(l)$, making it faster to implement and compute. Multiple programming languages can implement this classifier in a few lines of code, in this report Python was used to implement all DSP schemes.
-\subsubsection{Algorithm}
+\subsubsection{Implemented Algorithm}
 
 A short description of the python script implemented to compute the optimal parameters for the SVM algorithm is shown in this section. A function DSP\_ SVM returns the optimal parameters (kernel, class weight and scaling factor) for the SVM algorithm given a training dataset. All other functions implemented belong to the \textit{Sklearn} libary in python~\cite{scikit-learn}.
 
@@ -134,14 +134,14 @@ BS_R= SVMclass.predict(IQ_R)
 A \textit{random forest} (RF) or also known as \textit{random decision trees} is a ML algorithm that fits a number of \textit{decision tree classifiers} on different sub-samples of the dataset using averaging over all trees to improve the prediction accuracy and control over-fitting. This algorithm has been developed by incremental incorporation of well understood techniques to optimize its performance and prediction capabilities. By using decision trees, bootstrapping and boosting, three well established techniques, random forest has been developed to be straight-forward to implement and to be trained extremely fast~\cite{ho1995random}. A brief description of the implementation used to characterize NLIN is discussed in this section.
  
    
-\subsection{Analytical Description}
+\subsubsection{Analytical Description}
 
  Let us first discusses the principal element of this ML algorithm, which is a decision tree. Multiple methods exist to grow a decision tree, the method used in this scheme is known as  \textit{oblique decision trees}~\cite{ho1995random}.  The first step to grow a tree is generating a initial hyperplane that is not necessarily tailored for the dataset of interest. This $d$-dimensional hypreplane can be expressed as $H=(h_{1},h_{2},\cdots,h_{d})$. From this hyperplane the algorithm randomly picks an $h_{i}$ and adds a uniform random variable creating a new hyperplane~\cite{heath1993induction}. For both of this hyperplanes the \textit{sum-minority energy measure} is computed as defined in Reference~\cite{heath1993induction} Theorem 2.1. If the energy difference $\Delta E$ between the two hyperplanes is negative, then the energy of the perturbed hyperplane has decreased and it becomes the current split. If the change in energy increases or stay the same then the perturbed hyperplane has a probability of becoming the new hyperplane or being discarded. To determine when to stop perturbing the current split the energy of all perturbations (around 3000 iterations) is kept to select the split that generated the lowest energy~\cite{heath1993induction}. Although generating this trees can be computed very fast a limiting factor is over-fitting.~\\
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.9\textwidth]{RandomForest.png}
-\caption{ Two different decision trees from a forest are shown  with their computed hyperplane that divides the sub-sampled dataset. When all trees are averaged together a forest is crated giving a decision boundary the is not over-fitted to the original dataset. }
+\caption{ Two different decision trees from a forest are shown  with their computed hyperplane that divides the sub-sampled dataset. When all trees are averaged together a forest is crated giving a decision boundary the is not over-fitted to the original dataset.\\ {\scriptsize Image designed in reference to available figures in Reference~\cite{RFimg}} }
 \label{fig:RFshow}
 \end{figure}
 
