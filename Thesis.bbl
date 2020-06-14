@@ -1,0 +1,333 @@
+\begin{thebibliography}{10}
+
+\bibitem{FundPhoto}
+B.~Saleh and M.~Teich, {\em Fundamentals of Photonics}.
+\newblock Wiley Series in Pure and Applied Optics, Wiley, 2007.
+
+\bibitem{khan2019optical}
+F.~N. Khan, Q.~Fan, C.~Lu, and A.~P.~T. Lau, ``An optical communication's
+  perspective on machine learning and its applications,'' {\em Journal of
+  Lightwave Technology}, vol.~37, no.~2, pp.~493--516, 2019.
+
+\bibitem{ho2005generation}
+K.-P. Ho and H.-W. Cuei, ``Generation of arbitrary quadrature signals using one
+  dual-drive modulator,'' {\em Journal of lightwave technology}, vol.~23,
+  no.~2, p.~764, 2005.
+
+\bibitem{kikuchi2015fundamentals}
+K.~Kikuchi, ``Fundamentals of coherent optical fiber communications,'' {\em
+  Journal of Lightwave Technology}, vol.~34, no.~1, pp.~157--179, 2015.
+
+\bibitem{kato2000dispersion}
+T.~Kato, E.~Sasaoka, and S.~Ishikawa, ``Dispersion-shifted fiber,'' June~6
+  2000.
+\newblock US Patent 6,072,929.
+
+\bibitem{aikawa2005dispersion}
+K.~Aikawa, S.~Shimizu, T.~Suzuki, R.~Suzuki, M.~Nakayama, and K.~Himeno,
+  ``Dispersion compensating fiber and dispersion compensating fiber module,''
+  Aug.~30 2005.
+\newblock US Patent 6,937,805.
+
+\bibitem{NLPNDSP}
+K.-P. Ho and J.~Kahn, ``Electronic compensation technique to mitigate nonlinear
+  phase noise,'' {\em Lightwave Technology, Journal of}, vol.~22, pp.~779 --
+  783, 04 2004.
+
+\bibitem{RFimg}
+M.~Hanselmann, U.~Köthe, M.~Kirchner, B.~Renard, E.~Amstalden~van Hove,
+  K.~Glunde, R.~Heeren, F.~Hamprecht, and R.~Morgan, ``Towards digital staining
+  using imaging mass spectrometry and random forests-technical report,'' 04
+  2009.
+
+\bibitem{transmissionvpi}
+VPItransmissionMaker, ``Vpi component maker™,'' {\em Photonic Modules
+  Reference Manual}.
+
+\bibitem{HistoryCommunication}
+A.~A. Huurdeman, {\em The worldwide history of telecommunications}.
+\newblock John Wiley \& Sons, 2003.
+
+\bibitem{arvidsson2006brands}
+A.~Arvidsson {\em et~al.}, {\em Brands: Meaning and value in media culture}.
+\newblock Psychology Press, 2006.
+
+\bibitem{ModForm}
+M.~Seimetz and R.~Freund, ``Next generation optical networks based on
+  higher-order modulation formats, coherent receivers and electronic distortion
+  equalization,'' {\em Elektrotechnik und Informationstechnik}, vol.~125,
+  pp.~284--289, 08 2008.
+
+\bibitem{NetGenTransp}
+M.~{Marciniak}, ``Future networks - beyond next generation networking,'' in
+  {\em 2008 10th Anniversary International Conference on Transparent Optical
+  Networks}, vol.~1, pp.~25--28, June 2008.
+
+\bibitem{NLPNinCFO}
+S.~{Kumar}, ``Analysis of nonlinear phase noise in coherent fiber-optic systems
+  based on phase shift keying,'' {\em Journal of Lightwave Technology},
+  vol.~27, pp.~4722--4733, Nov 2009.
+
+\bibitem{shen2010optical}
+T.~S.~R. Shen, K.~Meng, A.~P.~T. Lau, and Z.~Y. Dong, ``Optical performance
+  monitoring using artificial neural network trained with asynchronous
+  amplitude histograms,'' {\em IEEE Photonics Technology Letters}, vol.~22,
+  no.~22, pp.~1665--1667, 2010.
+
+\bibitem{jargon2008optical}
+J.~A. Jargon, X.~Wu, and A.~E. Willner, ``Optical performance monitoring using
+  artificial neural networks trained with eye-diagram parameters,'' {\em IEEE
+  Photonics Technology Letters}, vol.~21, no.~1, pp.~54--56, 2008.
+
+\bibitem{khan2012modulation}
+F.~N. Khan, Y.~Zhou, A.~P.~T. Lau, and C.~Lu, ``Modulation format
+  identification in heterogeneous fiber-optic networks using artificial neural
+  networks,'' {\em Optics express}, vol.~20, no.~11, pp.~12422--12431, 2012.
+
+\bibitem{zibar2015application}
+D.~Zibar, L.~H.~H. de~Carvalho, M.~Piels, A.~Doberstein, J.~Diniz,
+  B.~Nebendahl, C.~Franciscangelis, J.~Estaran, H.~Haisch, N.~G. Gonzalez, {\em
+  et~al.}, ``Application of machine learning techniques for amplitude and phase
+  noise characterization,'' {\em Journal of Lightwave Technology}, vol.~33,
+  no.~7, pp.~1333--1343, 2015.
+
+\bibitem{Nonparameter}
+M.~{Li}, S.~{Yu}, J.~{Yang}, Z.~{Chen}, Y.~{Han}, and W.~{Gu}, ``Nonparameter
+  nonlinear phase noise mitigation by using m-ary support vector machine for
+  coherent optical systems,'' {\em IEEE Photonics Journal}, vol.~5,
+  pp.~7800312--7800312, Dec 2013.
+
+\bibitem{ProposeFiberCom}
+J.-i. Nishizawa and K.~Suto, ``Terahertz wave generation and light
+  amplification using raman effect,'' {\em Bhat, KN and DasGupta, Amitava.
+  Physics of semiconductor devices. New Delhi, India: Narosa Publishing House},
+  p.~27, 2004.
+
+\bibitem{AccesFiber}
+J.~B. Gallegos, Doyle;~Narimatsu and O.~Ariana, {\em Innovative Business Models
+  for Expanding Fiber-Optic Networks and Closing the Access Gaps}.
+\newblock World Bank Group, 2018.
+
+\bibitem{COChistory}
+K.~Kikuchi, {\em Coherent Optical Communications: Historical Perspectives and
+  Future Directions}, pp.~11--49.
+\newblock 06 2010.
+
+\bibitem{opticalsemaphore}
+M.~Arumugam, ``Optical fiber communication—an overview,'' {\em Pramana},
+  vol.~57, no.~5-6, pp.~849--869, 2001.
+
+\bibitem{ramaswami2009optical}
+R.~Ramaswami, K.~Sivarajan, and G.~Sasaki, {\em Optical networks: a practical
+  perspective}.
+\newblock Morgan Kaufmann, 2009.
+
+\bibitem{kao1966dielectric}
+K.~Kao and G.~A. Hockham, ``Dielectric-fibre surface waveguides for optical
+  frequencies,'' in {\em Proceedings of the Institution of Electrical
+  Engineers}, vol.~113, pp.~1151--1158, IET, 1966.
+
+\bibitem{OFCNetwork}
+R.~{Ramaswami}, ``Optical fiber communication: from transmission to
+  networking,'' {\em IEEE Communications Magazine}, vol.~40, pp.~138--147, May
+  2002.
+
+\bibitem{Sharma2013ARO}
+P.~Sharma, S.~Pardeshi, R.~K. Arora, and M.~Singh, ``A review of the
+  development in the field of fiber optic communication systems,'' 2013.
+
+\bibitem{kikuchi2008coherent}
+K.~Kikuchi, ``Coherent optical communications—history, state-of-the-art
+  technologies, and challenges for the future—,'' in {\em OECC/ACOFT
+  2008-Joint Conference of the Opto-Electronics and Communications Conference
+  and the Australian Conference on Optical Fibre Technology}, pp.~1--4, IEEE,
+  2008.
+
+\bibitem{FiberAgrawal}
+G.~P. Agrawal, {\em Optical Fibers}.
+\newblock John Wiley \& Sons, Ltd, 2011.
+
+\bibitem{behrens2010nonlinear}
+C.~Behrens, R.~I. Killey, S.~J. Savory, M.~Chen, and P.~Bayvel, ``Nonlinear
+  distortion in transmission of higher order modulation formats,'' {\em IEEE
+  Photonics Technology Letters}, vol.~22, no.~15, pp.~1111--1113, 2010.
+
+\bibitem{benedetto1999principles}
+S.~Benedetto and E.~Biglieri, {\em Principles of digital transmission: with
+  wireless applications}.
+\newblock Springer Science \& Business Media, 1999.
+
+\bibitem{webb1994modern}
+W.~T. Webb and L.~Hanzo, {\em Modern Quadrature Amplitude Modulation:
+  Principles and applications for fixed and wireless channels: one}.
+\newblock IEEE Press-John Wiley, 1994.
+
+\bibitem{paik1994mode}
+W.~H. Paik, S.~A. Lery, and J.~M. Fox, ``Mode selective quadrature amplitude
+  modulation communication system,'' Nov.~8 1994.
+\newblock US Patent 5,363,408.
+
+\bibitem{agrawalapplications}
+G.~Agrawal, {\em Applications of Nonlinear Fiber Optics}.
+\newblock Elsevier Science, 2010.
+
+\bibitem{PrincBorn}
+M.~Born, E.~Wolf, A.~B. Bhatia, P.~C. Clemmow, D.~Gabor, A.~R. Stokes, A.~M.
+  Taylor, P.~A. Wayman, and W.~L. Wilcock, {\em Principles of Optics:
+  Electromagnetic Theory of Propagation, Interference and Diffraction of
+  Light}.
+\newblock Cambridge University Press, 7~ed., 1999.
+
+\bibitem{NLPNmPSK}
+N.~Ekanayake and H.~M. V.~R. Herath, ``Effect of nonlinear phase noise on the
+  performance of m-ary psk signals in optical fiber links,'' {\em J. Lightwave
+  Technol.}, vol.~31, pp.~447--454, Feb 2013.
+
+\bibitem{Zibar:12}
+D.~Zibar, O.~Winther, N.~Franceschi, R.~Borkowski, A.~Caballero, V.~Arlunno,
+  M.~N. Schmidt, N.~G. Gonzales, B.~Mao, Y.~Ye, K.~J. Larsen, and I.~T. Monroy,
+  ``Nonlinear impairment compensation using expectation maximization for
+  dispersion managed and unmanaged pdm 16-qam transmission,'' {\em Opt.
+  Express}, vol.~20, pp.~B181--B196, Dec 2012.
+
+\bibitem{kaplan2019siri}
+A.~Kaplan and M.~Haenlein, ``Siri, siri, in my hand: Who’s the fairest in the
+  land? on the interpretations, illustrations, and implications of artificial
+  intelligence,'' {\em Business Horizons}, vol.~62, no.~1, pp.~15--25, 2019.
+
+\bibitem{marsland2014machine}
+S.~Marsland, {\em Machine learning: an algorithmic perspective}.
+\newblock Chapman and Hall/CRC, 2014.
+
+\bibitem{kikuchi2010coherent}
+K.~Kikuchi, ``Coherent optical communications: Historical perspectives and
+  future directions,'' in {\em High Spectral Density Optical Communication
+  Technologies}, pp.~11--49, Springer, 2010.
+
+\bibitem{DFBtunable}
+Y.~{Kotaki} and H.~{Ishikawa}, ``Wavelength tunable dfb and dbr lasers for
+  coherent optical fibre communications,'' {\em IEE Proceedings J -
+  Optoelectronics}, vol.~138, no.~2, pp.~171--177, 1991.
+
+\bibitem{agrawal2001applications}
+G.~Agrawal, {\em Applications of nonlinear fiber optics}.
+\newblock Elsevier, 2001.
+
+\bibitem{zou2016spectrally}
+K.~Zou, Y.~Zhu, F.~Zhang, and Z.~Chen, ``Spectrally efficient terabit optical
+  transmission with nyquist 64-qam half-cycle subcarrier modulation and direct
+  detection,'' {\em Optics letters}, vol.~41, no.~12, pp.~2767--2770, 2016.
+
+\bibitem{kuschnerov2009dsp}
+M.~Kuschnerov, F.~N. Hauske, K.~Piyawanno, B.~Spinnler, M.~S. Alfiad,
+  A.~Napoli, and B.~Lankl, ``Dsp for coherent single-carrier receivers,'' {\em
+  Journal of lightwave technology}, vol.~27, no.~16, pp.~3614--3622, 2009.
+
+\bibitem{stojanovic2011clock}
+N.~Stojanovic, F.~N. Hauske, C.~Xie, and M.~Chen, ``Clock recovery in coherent
+  optical receivers,'' in {\em Photonic Networks, 12. ITG Symposium}, pp.~1--4,
+  VDE, 2011.
+
+\bibitem{seimetz2005multi}
+M.~Seimetz, ``Multi-format transmitters for coherent optical m-psk and m-qam
+  transmission,'' in {\em Proceedings of 2005 7th International Conference
+  Transparent Optical Networks, 2005.}, vol.~2, pp.~225--229, IEEE, 2005.
+
+\bibitem{levenson1974dispersion}
+M.~Levenson and N.~Bloembergen, ``Dispersion of the nonlinear optical
+  susceptibility tensor in centrosymmetric media,'' {\em Physical Review B},
+  vol.~10, no.~10, p.~4447, 1974.
+
+\bibitem{stolen1973optical}
+R.~Stolen and A.~Ashkin, ``Optical kerr effect in glass waveguide,'' {\em
+  Applied Physics Letters}, vol.~22, no.~6, pp.~294--296, 1973.
+
+\bibitem{boyd2003nonlinear}
+R.~W. Boyd, {\em Nonlinear optics}.
+\newblock Elsevier, 2003.
+
+\bibitem{agrawal2000nonlinear}
+G.~P. Agrawal, ``Nonlinear fiber optics,'' in {\em Nonlinear Science at the
+  Dawn of the 21st Century}, Springer, 2000.
+
+\bibitem{miya1979ultimate}
+T.~Miya, Y.~Terunuma, T.~Hosaka, and T.~Miyashita, ``Ultimate low-loss
+  single-mode fibre at 1.55 $\mu$m,'' {\em Electronics Letters}, vol.~15,
+  no.~4, pp.~106--108, 1979.
+
+\bibitem{born2013principles}
+M.~Born and E.~Wolf, {\em Principles of optics: electromagnetic theory of
+  propagation, interference and diffraction of light}.
+\newblock Elsevier, 2013.
+
+\bibitem{dris2017analysis}
+S.~Dris, H.~Louchet, and A.~Richter, ``Analysis of nonlinear interference noise
+  in flexible optical networks,'' in {\em 2017 Opto-Electronics and
+  Communications Conference (OECC) and Photonics Global Conference (PGC)},
+  pp.~1--3, IEEE, 2017.
+
+\bibitem{le2015advanced}
+N.~Le~Binh, {\em Advanced digital optical communications}.
+\newblock CRC Press, 2015.
+
+\bibitem{gordon1990phase}
+J.~P. Gordon and L.~F. Mollenauer, ``Phase noise in photonic communications
+  systems using linear amplifiers,'' {\em Optics letters}, vol.~15, no.~23,
+  pp.~1351--1353, 1990.
+
+\bibitem{goldfarb2007chromatic}
+G.~Goldfarb and G.~Li, ``Chromatic dispersion compensation using digital iir
+  filtering with coherent detection,'' {\em IEEE Photonics Technology Letters},
+  vol.~19, no.~13, pp.~969--971, 2007.
+
+\bibitem{kim1994measurement}
+K.~Kim, R.~Stolen, W.~Reed, and K.~Quoi, ``Measurement of the nonlinear index
+  of silica-core and dispersion-shifted fibers,'' {\em Optics letters},
+  vol.~19, no.~4, pp.~257--259, 1994.
+
+\bibitem{namihira2002comparison}
+Y.~Namihira, K.~Miyagi, K.~Kaneshima, M.~Tadakuma, C.~Vinegoni, G.~Pietra, and
+  K.~Kawanami, ``A comparison of six techniques for nonlinear coefficient
+  measurements of various single mode optical fibers.,'' {\em NIST SPECIAL
+  PUBLICATION SP}, pp.~15--18, 2002.
+
+\bibitem{liu2002improving}
+X.~Liu, X.~Wei, R.~E. Slusher, and C.~McKinstrie, ``Improving transmission
+  performance in differential phase-shift-keyed systems by use of lumped
+  nonlinear phase-shift compensation,'' {\em Optics letters}, vol.~27, no.~18,
+  pp.~1616--1618, 2002.
+
+\bibitem{boser1992training}
+B.~E. Boser, I.~M. Guyon, and V.~N. Vapnik, ``A training algorithm for optimal
+  margin classifiers,'' in {\em Proceedings of the fifth annual workshop on
+  Computational learning theory}, pp.~144--152, 1992.
+
+\bibitem{smola1998learning}
+A.~J. Smola and B.~Sch{\"o}lkopf, {\em Learning with kernels}, vol.~4.
+\newblock Citeseer, 1998.
+
+\bibitem{scikit-learn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay, ``Scikit-learn:
+  Machine learning in {P}ython,'' {\em Journal of Machine Learning Research},
+  vol.~12, pp.~2825--2830, 2011.
+
+\bibitem{ho1995random}
+T.~K. Ho, ``Random decision forests,'' in {\em Proceedings of 3rd international
+  conference on document analysis and recognition}, vol.~1, pp.~278--282, IEEE,
+  1995.
+
+\bibitem{heath1993induction}
+D.~Heath, S.~Kasif, and S.~Salzberg, ``Induction of oblique decision trees,''
+  in {\em IJCAI}, vol.~1993, pp.~1002--1007, 1993.
+
+\bibitem{friedman2002stochastic}
+J.~H. Friedman, ``Stochastic gradient boosting,'' {\em Computational statistics
+  \& data analysis}, vol.~38, no.~4, pp.~367--378, 2002.
+
+\bibitem{hancock2012bootstrapping}
+G.~R. Hancock and M.~Liu, ``Bootstrapping standard errors and data-model fit
+  statistics in structural equation modeling.,'' 2012.
+
+\end{thebibliography}

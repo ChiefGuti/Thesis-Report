@@ -272,7 +272,7 @@ Nonlinear noise in an optical communication system induces a phase shift to the 
 
 
 
- Three different nonlinear effects will be discussed that fall into  two categories, \emph{intra-channel NLIN} or \emph{self-channel interference} and \emph{inter-channel NLIN} or \emph{cross/multi-channel interference}. The intra-channel effects in interest are \emph{self phase modulation } and the \emph{Gordon-Mullenauere effect}. For inter-channel effects \emph{cross phase modulation} will be considered in a WDM system.
+ Three different nonlinear effects will be discussed that fall into  two categories, \emph{intra-channel NLIN} or \emph{self-channel interference} and \emph{inter-channel NLIN} or \emph{cross-channel interference}. The intra-channel effects in interest are \emph{self phase modulation } and the \emph{Gordon-Mullenauere effect}. For inter-channel effects \emph{cross phase modulation} will be considered in a WDM system.
   
 \subsubsection{Self Phase Modulation}
 In a fiber absent of dispersion $\beta_2=0$ the transmitted pulse undergoes a phase shift due to the intensity dependent refractive index, this modulation is known as \textit{self phase modulation }(SPM). The refractive index intensity dependence induces a power dependence on the propagation constant~\cite{FiberAgrawal}, that can be written as~\cite{le2015advanced}  
@@ -292,7 +292,7 @@ where $A_{eff}$ is the effective area of the guided mode and $k=2\pi/\lambda$ is
 \end{gather}
 \label{eq:phinl}
 \end{subequations}
-The effective interaction length is defined as $L_{eff}=(1-e^{-\alpha L})/\alpha$ and the power in the fiber $P(z)=P_{in}e^{\alpha L}$~\cite{le2015advanced}. Equation~\ref{eq:phinl} gives us the amount of phase change over the fiber length L along the propagation axis $z$. The assumptions made to compute the nonlinear phase shift describes the maximum phase shift possible in a system where a CW driving laser is used with a IM/DD format non-return to zero (NRZ) ~\cite{agrawal2001applications,FiberAgrawal,le2015advanced}. 
+The effective interaction length is defined as $L_{eff}=(1-e^{-\alpha L})/\alpha$ and the power in the fiber $P(z)=P_{in}e^{-\alpha L}$~\cite{le2015advanced}. Equation~\ref{eq:phinl} gives us the amount of phase change over the fiber length L along the propagation axis $z$. The assumptions made to compute the nonlinear phase shift describes the maximum phase shift possible in a system where a CW driving laser is used with a IM/DD format non-return to zero (NRZ) ~\cite{agrawal2001applications,FiberAgrawal,le2015advanced}. 
 
 It is important to note that when dispersion effects are present the dependencies become more complex and require more sophisticated numerical solutions, making it cumbersome to have a complete model of the system~\cite{agrawal2001applications,gordon1990phase}.  In multiple references ~\cite{le2015advanced,FiberAgrawal,agrawal2000nonlinear} the limit for $P_{in}$ is introduced as a general rule to follow before SPM starts to corrupt the signal.  The upper bound  is given as $P_{in}<0.1\alpha/\gamma N_{A}$, where $N_{A}$ is the number of amplifiers~\cite{le2015advanced}. For  an average fiber system with 10 amplifiers the upper limit is 1.2-3~mW. Making it a critical impermanent for optical system with a high average power. SPM is a NLIN and as concluded in Reference~\cite{dris2017analysis} the effects are modulation format independent.
 

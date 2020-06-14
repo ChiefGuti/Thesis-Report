@@ -15,7 +15,7 @@ Consider the electric field at the detector side after N spans of lumped amplifi
 
 To Compensate for the acquired nonlinear phase shift, it is natural to suggest a scheme that rotates the phase as $E_{C}=E_{R}e^{-j\alpha P_{N}}$ where  $P_{N}$ is the output power of the Nth amplifier and $\alpha$ is a \textit{scaling factor}~\cite{liu2002improving}. In Reference~\cite{NLPNDSP} the \textit{optimal scaling factor} is analytically deduced to be 
 \begin{equation}
-\alpha=-\gamma L_{eff}\frac{N+1}{2}.
+ .
 \end{equation}
  The implementation of this NLPN compensating technique on a square 16QAM constellation is shown in Figure.~\ref{fig:NLPNvis} with decision regions determined using an \textit{expectation maximization} and \textit{Voronoi diagrams}. Notice from this example that the NLPN phase shift present in Figure~\ref{fig:NLPN16qam} causes misclassification of multiple constellation points. It is also important to observe that an imperfect classification is being performed in Figure~\ref{fig:CHQAM}, suggesting that when to symbols start to overlap not much is there to do generally. ~\\
 
